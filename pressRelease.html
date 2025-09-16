@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Press Release</title>
-    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/lansercss/plugins.css" />
+    <link rel="stylesheet" href="css/lansercss/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
       * {
@@ -17,16 +31,79 @@
       body {
         background-color: #f7f7f7;
         color: #333;
-        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
-      .press-release-container {
-        max-width: 800px;
-        margin: 40px auto;
+      .press-container {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .press-sidebar {
+        width: 300px;
+      }
+
+      .press-sidebar h3 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        color: #333;
+      }
+
+      .press-card {
         background-color: #fff;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .press-card:hover {
+        transform: scale(1.02);
+      }
+
+      .press-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .press-card-content {
+        padding: 10px;
+      }
+
+      .press-card-content h4 {
+        margin-bottom: 8px;
+        font-size: 1em;
+        color: #007bff;
+      }
+
+      .press-card-content p {
+        font-size: 0.8em;
+        color: #777;
+      }
+
+      .press-content-area {
+        flex-grow: 1;
+        background-color: #fff;
+        border-radius: 8px;
         padding: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .press-header img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
       }
 
       .press-header h1 {
@@ -58,11 +135,19 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        gap: 10px;
       }
 
       .press-footer p {
         font-size: 0.9em;
         color: #555;
+        margin: 0;
+      }
+
+      .press-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       .press-actions button {
@@ -72,7 +157,6 @@
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
-        margin-left: 10px;
         font-size: 0.9em;
         transition: background-color 0.3s ease;
       }
@@ -87,59 +171,225 @@
           align-items: flex-start;
         }
         .press-actions {
-          margin-top: 10px;
+          justify-content: flex-start;
         }
-        .press-actions button {
-          margin-left: 0;
-          margin-right: 10px;
+      }
+
+      @media (max-width: 800px) {
+        .press-container {
+          flex-direction: column;
+        }
+        .press-sidebar {
+          width: 100%;
         }
       }
     </style>
   </head>
-
   <body>
-    <div class="press-release-container">
-      <header class="press-header">
-        <h1>Company Announces Groundbreaking Product Launch</h1>
-        <p class="press-date">September 16, 2025</p>
-        <h2 class="press-subtitle">
-          Revolutionizing the industry with innovative solutions
-        </h2>
-      </header>
-
-      <section class="press-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non
-          erat sit amet sapien tincidunt lacinia. Nullam vel ipsum nec leo
-          ullamcorper facilisis. Curabitur id arcu sit amet risus egestas
-          convallis non ut erat.
-        </p>
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Sed vulputate, nunc eget sollicitudin
-          viverra, arcu odio gravida nibh, id fermentum dolor sapien a sapien.
-        </p>
-        <p>
-          The new product offers a seamless experience with cutting-edge
-          technology to enhance user satisfaction and productivity. It marks a
-          significant milestone for the company’s future growth and market
-          presence.
-        </p>
-      </section>
-
-      <footer class="press-footer">
-        <p><strong>Author:</strong> Jane Doe, PR Manager</p>
-        <div class="press-actions">
-          <button onclick="window.print()">Print</button>
-          <button onclick="downloadPDF()">Download PDF</button>
+    <header
+      class="site-header"
+      style="
+        width: 100%;
+        margin-bottom: 50px;
+        background-color: black !important;
+      "
+    >
+      <div class="container header-wrap">
+        <div class="site-branding">
+          <!-- For Image Logo -->
+          <!-- <a href="index.html" class="custom-logo-link"> <img src="img/logo.png" alt="" class="custom-logo"> </a> -->
+          <!-- For Site Title -->
+          <span class="site-title"> <a href="index.html">SKYBRIDGE</a> </span>
         </div>
-      </footer>
+        <nav class="primary-nav">
+          <ul class="primary-nav-list nav">
+            <li
+              class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent active"
+            >
+              <a href="index.html">HOME</a>
+              <!-- <ul> <li class="menu-item"><a href="index.html">PRALLAX HOME</a></li> <li class="menu-item"> <a href="home-slider-bg.html">SLIDER HOME</a> </li> <li class="menu-item"> <a href="home-video-bg.html">VIDEO HOME</a> </li> </ul> -->
+            </li>
+            <li class="menu-item"><a href="#about">ABOUT</a></li>
+            <li class="menu-item"><a href="#service">OUR EXPERTISE</a></li>
+            <li class="menu-item"><a href="blog.html">BLOG</a></li>
+            <li class="menu-item">
+              <a href="pressRelease.html">PRESS RELEASE</a>
+            </li>
+            <li class="menu-item"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- .header-wrap -->
+    </header>
+
+    <div class="press-container" style="margin: 400px 0 50px 0">
+      <aside class="press-sidebar">
+        <h3>Recent Press Releases</h3>
+        <div class="press-card">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60"
+            alt="Release 1"
+          />
+          <div class="press-card-content">
+            <h4>Product Launch</h4>
+            <p>Sep 10, 2025</p>
+          </div>
+        </div>
+        <div class="press-card">
+          <img
+            src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?w=500&auto=format&fit=crop&q=60"
+            alt="Release 2"
+          />
+          <div class="press-card-content">
+            <h4>Annual Report</h4>
+            <p>Aug 15, 2025</p>
+          </div>
+        </div>
+        <div class="press-card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673480195253-dc2229c109ef?w=500&auto=format&fit=crop&q=60"
+            alt="Release 3"
+          />
+          <div class="press-card-content">
+            <h4>Partnership</h4>
+            <p>Jul 05, 2025</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="press-content-area">
+        <header class="press-header">
+          <img
+            src="https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=500&auto=format&fit=crop&q=60"
+            alt="Main Release"
+          />
+          <h1>Company Announces Groundbreaking Product Launch</h1>
+          <p class="press-date">September 16, 2025</p>
+          <h2 class="press-subtitle">
+            Revolutionizing the industry with innovative solutions
+          </h2>
+        </header>
+
+        <section class="press-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non
+            erat sit amet sapien tincidunt lacinia. Nullam vel ipsum nec leo
+            ullamcorper facilisis. Curabitur id arcu sit amet risus egestas
+            convallis non ut erat.
+          </p>
+          <p>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Sed vulputate, nunc eget sollicitudin
+            viverra, arcu odio gravida nibh, id fermentum dolor sapien a sapien.
+          </p>
+          <p>
+            The new product offers a seamless experience with cutting-edge
+            technology to enhance user satisfaction and productivity. It marks a
+            significant milestone for the company’s future growth and market
+            presence.
+          </p>
+        </section>
+
+        <footer class="press-footer">
+          <p><strong>Author:</strong> Jane Doe, PR Manager</p>
+          <div class="press-actions">
+            <button onclick="window.print()">Print</button>
+            <button onclick="downloadPDF()">Download PDF</button>
+          </div>
+        </footer>
+      </main>
     </div>
+
+    <footer
+      style="
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+      "
+    >
+      <div
+        style="
+          max-width: 2200px;
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 20px;
+        "
+      >
+        <!-- About Section -->
+        <div style="flex: 1 1 250px; width: 100%; display: flex; flex-direction: column; justify-content: start; align-items: start;">
+          <h3 style="margin-bottom: 15px; color: white">About SKYBRIDGE</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: white">
+            We are committed to delivering the best services with integrity and
+            excellence. Connect with us to enhance your business reach.
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div style="flex: 1 1 150px; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h3 style="margin-bottom: 15px; color: white">Follow Us</h3>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: 13px;
+          opacity: 0.8;
+        "
+      >
+        © 2025 SKYBRIDGE. All rights reserved.
+      </div>
+    </footer>
 
     <script>
       function downloadPDF() {
         alert("This feature can be implemented using a library like jsPDF.");
       }
     </script>
+    <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
+    <!-- <script src="js/lanserjs/plugins.js"></script> -->
+    <script src="lanserjs/plugins.js"></script>
+    <script src="js/lanserjs/main.js"></script>
   </body>
 </html>
