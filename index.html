@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SkyBridge Group</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/lansercss/plugins.css" />
+
+    <link rel="stylesheet" href="css/lansercss/style.css" />
+
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- AdinaCss files -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/adinacss/bootstrap.css" />
+    <link rel="stylesheet" href="css/adinacss/animate.css" />
+    <link rel="stylesheet" href="css/adinacss/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/adinacss/slick.css" />
+    <link rel="stylesheet" href="css/adinacss/magnific-popup.css" />
+    <link rel="stylesheet" href="css/adinacss/font-awesome-pro.css" />
+    <link rel="stylesheet" href="css/adinacss/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="css/adinacss/spacing.css" />
+    <link rel="stylesheet" href="css/adinacss/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- Invena Css -->
+    <link
+      rel="stylesheet preload"
+      href="css/invenacss/plugins/fontawesome.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet preload"
+      href="css/invenacss/plugins/swiper.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet preload"
+      href="css/invenacss/plugins/metismenu.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet preload"
+      href="css/invenacss/plugins/magnifying-popup.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet preload"
+      href="css/invenacss/plugins/odometer.css"
+      as="style"
+    />
+
+    <!-- Don't uncomment this -->
+    <!-- <link
+      rel="stylesheet preload"
+      href="css/invenacss/vendor/bootstrap.min.css"
+      as="style"
+    /> -->
+
+    <!-- <link rel="stylesheet preload" href="invenaStyleCss/style.css" as="style" /> -->
+
+    <!-- Lanser JS -->
+    <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
+
+    <style>
+      .black-strip {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        padding: 40px 20px; /* Space inside the strip */
+        text-align: center; /* Center align text */
+        font-family: Arial, sans-serif;
+      }
+
+      .black-strip h2 {
+        margin: 0;
+        font-size: 28px;
+        color: white;
+      }
+
+      .black-strip p {
+        margin: 10px 0 0;
+        font-size: 16px;
+        opacity: 0.8;
+        color: white;
+      }
+
+      .black-strip button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background: #ff9800;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .black-strip button:hover {
+        background: #e68900;
+      }
+    </style>
+
+    <style>
+      .black-strip {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        padding: 40px 20px; /* Space inside the strip */
+        text-align: center; /* Center align text */
+        font-family: Arial, sans-serif;
+      }
+
+      .black-strip h2 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .black-strip p {
+        margin: 10px 0 0;
+        font-size: 16px;
+        opacity: 0.8;
+      }
+
+      .black-strip button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background: #ff9800;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .black-strip button:hover {
+        background: #e68900;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let banner = document.getElementById("banner-section");
+        let cssLoaded = false;
+
+        // Create link element but don't append yet
+        let link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "invenaStyleCss/style.css";
+        link.id = "invena-css";
+
+        // Intersection Observer setup
+        let observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !cssLoaded) {
+                document.head.appendChild(link);
+                cssLoaded = true;
+                console.log("CSS loaded!");
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.1 }
+        ); // jab 10% dikhe tab trigger hoga
+
+        observer.observe(banner);
+      });
+    </script>
+
+    <style>
+      #image-slider {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 500px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      #slides {
+        display: flex;
+        width: 100%;
+        transition: transform 1.2s ease-in-out;
+      }
+
+      #slides img {
+        min-width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #prev {
+        left: 10px;
+      }
+
+      #next {
+        right: 10px;
+      }
+    </style>
+
+    <style>
+      footer a:hover {
+        color: #ff9800;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slidesContainer = document.getElementById("slides");
+        const images = slidesContainer.getElementsByTagName("img");
+        const nextBtn = document.getElementById("next");
+        const prevBtn = document.getElementById("prev");
+        let current = 0;
+        const total = images.length;
+
+        function updateSlide() {
+          slidesContainer.style.transform = `translateX(${-current * 100}%)`;
+        }
+
+        function nextImage() {
+          current = (current + 1) % total;
+          updateSlide();
+        }
+
+        function prevImage() {
+          current = (current - 1 + total) % total;
+          updateSlide();
+        }
+
+        nextBtn.addEventListener("click", nextImage);
+        prevBtn.addEventListener("click", prevImage);
+
+        setInterval(nextImage, 3000);
+      });
+    </script>
+
+    <!-- blog style -->
+    <style>
+      .blog-section {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 80px auto;
+      }
+
+      .blog-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+
+      .main-blog {
+        width: 100%;
+      }
+
+      .side-blogs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .blog-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .blog-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .blog-content {
+        padding: 20px;
+      }
+
+      .blog-content .date {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .blog-content h2 {
+        font-size: 24px;
+        margin: 10px 0;
+        color: #333;
+      }
+
+      .blog-content h3 {
+        font-size: 18px;
+        margin: 5px 0;
+        color: #333;
+      }
+
+      .blog-content p {
+        font-size: 16px;
+        color: #444;
+      }
+
+      .blog-link {
+        text-decoration: none;
+        color: #000; /* default color */
+        transition: color 0.3s ease;
+      }
+
+      .blog-link:hover {
+        color: #ff6600; /* hover color – tum apna pasand ka color de sakte ho */
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .blog-container {
+          grid-template-columns: 1fr;
+        }
+        .side-blogs {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .side-blogs article {
+          width: 48%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .blog-container {
+          grid-template-columns: 1fr;
+        }
+        .side-blogs {
+          flex-direction: column;
+        }
+        .side-blogs article {
+          width: 100%;
+        }
+        .blog-content {
+          padding: 15px;
+        }
+        .blog-content .date {
+          font-size: 12px;
+        }
+        .blog-content h2 {
+          font-size: 20px;
+        }
+        .blog-content h3 {
+          font-size: 16px;
+        }
+        .blog-content p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <div class="site-branding">
+          <!-- For Image Logo -->
+          <!-- <a href="index.html" class="custom-logo-link">
+              <img src="img/logo.png" alt="" class="custom-logo">
+            </a> -->
+          <!-- For Site Title -->
+          <span class="site-title">
+            <a href="index.html">SKYBRIDGE</a>
+          </span>
+        </div>
+        <nav class="primary-nav">
+          <ul class="primary-nav-list nav">
+            <li
+              class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent active"
+            >
+              <a href="#home">HOME</a>
+              <!-- <ul>
+                <li class="menu-item"><a href="index.html">PRALLAX HOME</a></li>
+                <li class="menu-item">
+                  <a href="home-slider-bg.html">SLIDER HOME</a>
+                </li>
+                <li class="menu-item">
+                  <a href="home-video-bg.html">VIDEO HOME</a>
+                </li>
+              </ul> -->
+            </li>
+            <li class="menu-item"><a href="#about">ABOUT</a></li>
+            <li class="menu-item"><a href="#service">OUR EXPERTISE</a></li>
+            <li class="menu-item"><a href="blog.html">BLOG</a></li>
+            <li class="menu-item"><a href="#team">PRESS RELEASE</a></li>
+            <li class="menu-item"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- .header-wrap -->
+    </header>
+
+    <!-- Start Hero Section -->
+    <section class="hero text-center" id="home">
+      <div
+        class="single-slide parallax"
+        style="background-image: url(img/hero-bg2.jpg)"
+      >
+        <div class="container">
+          <h3>Digital Marketing Services</h3>
+          <h1>WE ARE AWESOME THEMEZ</h1>
+          <h3>Web Design - Marketing - Branding - Consulting</h3>
+          <div class="hero-btn-wrap text-center">
+            <a href="#about" class="hero-btn">EXPLORE</a>
+          </div>
+        </div>
+      </div>
+      <!-- .single-slider -->
+    </section>
+
+    <!-- td-about-area-start -->
+    <div class="td-about-area fix pt-145 pb-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-7 col-md-12 mb-30">
+            <div
+              class="row-custom-wrapper wow fadeInLeft"
+              data-wow-delay=".4s"
+              data-wow-duration="1s"
+            >
+              <div class="row-custom">
+                <div class="col-custom active">
+                  <div class="td-panel-item">
+                    <div class="td-panel-content">
+                      <span>01.</span>
+                      <h4 class="td-panel-title child-one">HR Researches</h4>
+                    </div>
+                  </div>
+                  <div class="td-panel-item-2">
+                    <div class="td-panel-content-2">
+                      <div class="td-panel-thumb">
+                        <img
+                          class="w-100"
+                          src="img/adinaimg/01.jpg"
+                          alt="thumb"
+                        />
+                      </div>
+                      <div class="td-panel-content-inner fix p-relative">
+                        <span class="td-panel-shape">01</span>
+                        <h4 class="td-panel-title-2 mb-10">
+                          <a href="about.html"
+                            >Unique & modern business tips for our clients.</a
+                          >
+                        </h4>
+                        <p class="mb-160">
+                          Elevate your experience with our premium services
+                          tailored to your needs.
+                        </p>
+                        <div class="td-panel-btn">
+                          <a class="td-btn td-left-right" href="about.html"
+                            >Read More
+                            <span class="td-arrow-angle ml-10">
+                              <svg
+                                class="td-arrow-svg-top-right"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="10"
+                                viewBox="0 0 10.00 10.00"
+                              >
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-custom">
+                  <div class="td-panel-item">
+                    <div class="td-panel-content">
+                      <span>02.</span>
+                      <h4 class="td-panel-title child-two">Data Analysis</h4>
+                    </div>
+                  </div>
+                  <div class="td-panel-item-2">
+                    <div class="td-panel-content-2">
+                      <div class="td-panel-thumb">
+                        <img
+                          class="w-100"
+                          src="img/adinaimg/02.jpg"
+                          alt="thumb"
+                        />
+                      </div>
+                      <div class="td-panel-content-inner fix p-relative">
+                        <span class="td-panel-shape">02</span>
+                        <h4 class="td-panel-title-2 mb-10">
+                          <a href="about.html"
+                            >Unique & modern business tips for our clients.</a
+                          >
+                        </h4>
+                        <p class="mb-160">
+                          Elevate your experience with our premium services
+                          tailored to your needs.
+                        </p>
+                        <div class="td-panel-btn">
+                          <a class="td-btn td-left-right" href="about.html"
+                            >Read More
+                            <span class="td-arrow-angle ml-10">
+                              <svg
+                                class="td-arrow-svg-top-right"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="10"
+                                viewBox="0 0 10.00 10.00"
+                              >
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-custom">
+                  <div class="td-panel-item">
+                    <div class="td-panel-content">
+                      <span>03.</span>
+                      <h4 class="td-panel-title child-three">
+                        Unique & modern
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="td-panel-item-2">
+                    <div class="td-panel-content-2">
+                      <div class="td-panel-thumb">
+                        <img
+                          class="w-100"
+                          src="img/adinaimg/03.jpg"
+                          alt="thumb"
+                        />
+                      </div>
+                      <div class="td-panel-content-inner fix p-relative">
+                        <span class="td-panel-shape">03</span>
+                        <h4 class="td-panel-title-2 mb-10">
+                          <a href="about.html"
+                            >Unique & modern business tips for our clients.</a
+                          >
+                        </h4>
+                        <p class="mb-160">
+                          Elevate your experience with our premium services
+                          tailored to your needs.
+                        </p>
+                        <div class="td-panel-btn">
+                          <a class="td-btn td-left-right" href="about.html"
+                            >Read More
+                            <span class="td-arrow-angle ml-10">
+                              <svg
+                                class="td-arrow-svg-top-right"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="10"
+                                viewBox="0 0 10.00 10.00"
+                              >
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                                <path
+                                  d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-5 mb-30">
+            <div
+              class="td-about-content-wrap p-relative ml-45 wow fadeInRight"
+              data-wow-delay=".4s"
+              data-wow-duration="1s"
+            >
+              <img
+                class="td-about-text-big d-none d-xl-block"
+                src="assets/img/about/a.png"
+                alt="a"
+              />
+              <span class="td-section-title-pre mb-10">Our Services</span>
+              <h2 class="td-section-title td-about-right-space">
+                Fields of expertise that our great team excels in
+              </h2>
+              <p class="td-about-para pr-10">
+                Elevate your experience with our premium services tailored to
+                your needs. From expert consultations to seamless solutions,
+                we're here to exceed your expectations let us handle the
+                details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Testimonial Section -->
+    <div class="testimonial-wrap section">
+      <div class="container">
+        <div class="testimonial owl-carousel text-center">
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum.
+            <small>Jon Smith.</small>
+          </blockquote>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore.
+            <small>Wilium lalin.</small>
+          </blockquote>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore.
+            <small>Lili Smith.</small>
+          </blockquote>
+        </div>
+        <!-- .testimonial -->
+      </div>
+    </div>
+    <!-- End Testimonial Section -->
+
+    <!-- <section class="video-section" id="video-section">
+      <div class="video-container">
+        <video src="asset/images/promo.mp4" muted loop playsinline></video>
+      </div>
+    </section> -->
+
+    <!-- banner three area start -->
+    <!-- <div class="banner-four-area-main-wrapper" id="banner-section">
+      <div class="swiper mySwiper-banner-four" dir="ltr">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-area-banner-four-wrapper">
+              <div class="banner-four-bg bg_image">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="inner-content-wrapper-four-banner">
+                        <span class="pre">Make Your Strategy Strong</span>
+                        <h1 class="title">
+                          Strengthen Your <br />
+                          <span class="in">Market</span> Presence
+                        </h1>
+                        <p class="disc">
+                          Our team of dedicated professionals brings expertise,
+                          passion, and a customer-first approach to every
+                          project, ensuring you receive the highest level of
+                          service.
+                        </p>
+                        <div class="button-wrapper">
+                          <a
+                            href="contact.html"
+                            class="rts-btn btn-primary btn-white"
+                            >Get Started</a
+                          >
+                          <a
+                            href="contact.html"
+                            class="rts-btn btn-primary btn-border"
+                            >Get Started</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-area-banner-four-wrapper">
+              <div class="banner-four-bg bg_image two">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="inner-content-wrapper-four-banner">
+                        <span class="pre">Make Your Strategy Strong</span>
+                        <h1 class="title">
+                          Best Sell <br />
+                          <span class="in">Market</span> Presence
+                        </h1>
+                        <p class="disc">
+                          Our team of dedicated professionals brings expertise,
+                          passion, and a customer-first approach to every
+                          project, ensuring you receive the highest level of
+                          service.
+                        </p>
+                        <div class="button-wrapper">
+                          <a href="#" class="rts-btn btn-primary btn-white"
+                            >Get Started</a
+                          >
+                          <a href="#" class="rts-btn btn-primary btn-border"
+                            >Get Started</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-area-banner-four-wrapper">
+              <div class="banner-four-bg bg_image three">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="inner-content-wrapper-four-banner">
+                        <span class="pre">Make Your Strategy Strong</span>
+                        <h1 class="title">
+                          Grow Your <br />
+                          <span class="in">Market</span> Sell
+                        </h1>
+                        <p class="disc">
+                          Our team of dedicated professionals brings expertise,
+                          passion, and a customer-first approach to every
+                          project, ensuring you receive the highest level of
+                          service.
+                        </p>
+                        <div class="button-wrapper">
+                          <a href="#" class="rts-btn btn-primary btn-white"
+                            >Get Started</a
+                          >
+                          <a href="#" class="rts-btn btn-primary btn-border"
+                            >Get Started</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="banner-shape-left-right">
+        <div class="left">
+          <img src="asset/images/banner/shape/left.svg" alt="left" />
+        </div>
+        <div class="right">
+          <img src="asset/images/banner/shape/right.svg" alt="left" />
+        </div>
+      </div>
+    </div> -->
+    <!-- banner three area end -->
+
+    <!-- mannual bannner -->
+    <div id="image-slider">
+      <div id="slides">
+        <img src="asset/images/banner/banner1.jpeg" alt="Slide 1" />
+        <img src="asset/images/banner/banner2.jpeg" alt="Slide 2" />
+        <img src="asset/images/banner/banner3.jpeg" alt="Slide 3" />
+        <img src="asset/images/banner/banner4.jpeg" alt="Slide 4" />
+        <img src="asset/images/banner/banner5.jpeg" alt="Slide 5" />
+      </div>
+
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+
+    <!-- td-service-area-start -->
+    <div
+      class="td-service-area fix bg-position mb-50 p-relative"
+      style="margin-top: 50px"
+    >
+      <div class="container-fluid g-0">
+        <div class="service__slider-8">
+          <div id="service-bg-img" class="service-img-2">
+            <div
+              class="service-bg service-img-1"
+              data-background="assets/img/service/bg2.jpg"
+            ></div>
+            <div
+              class="service-bg service-img-2"
+              data-background="assets/img/service/bg.jpg"
+            ></div>
+            <div
+              class="service-bg service-img-3"
+              data-background="assets/img/service/bg3.jpg"
+            ></div>
+            <div
+              class="service-bg service-img-4"
+              data-background="assets/img/service/bg4.jpg"
+            ></div>
+            <div
+              class="service-bg service-img-5"
+              data-background="assets/img/service/bg5.jpg"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="row gx-0 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1"
+        >
+          <div
+            class="col td-service-border service__item-8"
+            rel="service-img-1"
+          >
+            <div class="td-service-wrap p-relative">
+              <span class="td-service-cetagory">Business</span>
+              <h2 class="td-service-number">01</h2>
+              <div class="td-service-content">
+                <h4 class="td-service-title">
+                  <a href="service-details.html">Investments</a>
+                </h4>
+                <div class="td-service-content-inner">
+                  <p class="td-service-content-para mb-45">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <div class="td-service-btn">
+                    <a
+                      class="td-btn td-btn-2 td-left-right"
+                      href="service-details.html"
+                      >Read More
+                      <span class="td-arrow-angle ml-10">
+                        <svg
+                          class="td-arrow-svg-top-right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10.00 10.00"
+                        >
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col td-service-border service__item-8"
+            rel="service-img-2"
+          >
+            <div class="td-service-wrap p-relative">
+              <span class="td-service-cetagory td-service-cetagory-2"
+                >Finance</span
+              >
+              <h2 class="td-service-number">02</h2>
+              <div class="td-service-content">
+                <h4 class="td-service-title">
+                  <a href="service-details.html">Online Business</a>
+                </h4>
+                <div class="td-service-content-inner">
+                  <p class="td-service-content-para mb-45">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <div class="td-service-btn">
+                    <a
+                      class="td-btn td-btn-2 td-left-right"
+                      href="service-details.html"
+                      >Read More
+                      <span class="td-arrow-angle ml-10">
+                        <svg
+                          class="td-arrow-svg-top-right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10.00 10.00"
+                        >
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col td-service-border service__item-8"
+            rel="service-img-3"
+          >
+            <div class="td-service-wrap p-relative">
+              <span class="td-service-cetagory td-service-cetagory-3"
+                >Investment</span
+              >
+              <h2 class="td-service-number">03</h2>
+              <div class="td-service-content">
+                <h4 class="td-service-title">
+                  <a href="service-details.html">Cryptocurrency</a>
+                </h4>
+                <div class="td-service-content-inner">
+                  <p class="td-service-content-para mb-45">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <div class="td-service-btn">
+                    <a
+                      class="td-btn td-btn-2 td-left-right"
+                      href="service-details.html"
+                      >Read More
+                      <span class="td-arrow-angle ml-10">
+                        <svg
+                          class="td-arrow-svg-top-right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10.00 10.00"
+                        >
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col td-service-border service__item-8"
+            rel="service-img-4"
+          >
+            <div class="td-service-wrap p-relative">
+              <span class="td-service-cetagory td-service-cetagory-4"
+                >Digital Marketing</span
+              >
+              <h2 class="td-service-number">04</h2>
+              <div class="td-service-content">
+                <h4 class="td-service-title">
+                  <a href="service-details.html">Marketing</a>
+                </h4>
+                <div class="td-service-content-inner">
+                  <p class="td-service-content-para mb-45">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <div class="td-service-btn">
+                    <a
+                      class="td-btn td-btn-2 td-left-right"
+                      href="service-details.html"
+                      >Read More
+                      <span class="td-arrow-angle ml-10">
+                        <svg
+                          class="td-arrow-svg-top-right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10.00 10.00"
+                        >
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col td-service-border service__item-8"
+            rel="service-img-5"
+          >
+            <div class="td-service-wrap p-relative">
+              <span class="td-service-cetagory td-service-cetagory-5"
+                >Tax Advising</span
+              >
+              <h2 class="td-service-number">05</h2>
+              <div class="td-service-content">
+                <h4 class="td-service-title">
+                  <a href="service-details.html">Business & Finance</a>
+                </h4>
+                <div class="td-service-content-inner">
+                  <p class="td-service-content-para mb-45">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <div class="td-service-btn">
+                    <a
+                      class="td-btn td-btn-2 td-left-right"
+                      href="service-details.html"
+                      >Read More
+                      <span class="td-arrow-angle ml-10">
+                        <svg
+                          class="td-arrow-svg-top-right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10.00 10.00"
+                        >
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                          <path
+                            d="M1.018 10.009 0 8.991l7.569-7.582H1.723L1.737 0h8.26v8.274H8.574l.013-5.847Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- td-service-area-end -->
+
+    <section class="blog-section" style="margin-bottom: 50px">
+      <div class="blog-container">
+        <!-- Main Feature Blog -->
+        <div class="main-blog">
+          <article class="blog-card">
+            <img
+              src="asset/images/banner/20.webp"
+              srcset="
+                images/feature-mobile.jpg    600w,
+                asset/images/banner/20.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 65vw"
+              alt="Feature Blog Image"
+            />
+            <div class="blog-content">
+              <p class="date">Jan 05, 2025 &nbsp;&nbsp; 2 min read</p>
+              <h2>Discover unparalleled expertise in market</h2>
+              <p>
+                <a href="blog.html" class="blog-link">
+                  Discover Unparalleled Expertise in the Real Estate Market,
+                  Providing In-Depth Knowledge, Strategic Insights, and Tailored
+                  Solutions to Help You Navigate Every Step of Your Property
+                  Journey with Confidence.
+                </a>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Side Blogs -->
+        <div class="side-blogs">
+          <article class="blog-card">
+            <img
+              src="asset/images/banner/20.webp"
+              srcset="
+                asset/images/banner/20.webp  600w,
+                asset/images/banner/20.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="Blog 2 Image"
+            />
+            <div class="blog-content">
+              <p class="date">Feb 15, 2025 &nbsp;&nbsp; 3 min read</p>
+              <a href="blog.html" class="blog-link">
+                <h3>
+                  Modern and Functional Minimalist Home Design Inspirations
+                </h3>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <img
+              src="asset/images/banner/20.webp"
+              srcset="
+                asset/images/banner/20.webp  600w,
+                asset/images/banner/20.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="Blog 3 Image"
+            />
+            <div class="blog-content">
+              <p class="date">Mar 27, 2025 &nbsp;&nbsp; 4 min read</p>
+              <a href="blog.html" class="blog-link">
+                <h3>
+                  Common Home Design Mistakes to Avoid for a More Functional
+                  Living Space
+                </h3>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- td-about-area-end -->
+    <!-- <script src="index.js"></script> -->
+    <!-- Scripts -->
+    <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
+    <!-- <script src="js/lanserjs/plugins.js"></script> -->
+    <script src="lanserjs/plugins.js"></script>
+    <script src="js/lanserjs/main.js"></script>
+
+    <script>
+      window.addEventListener(
+        "wheel",
+        function (e) {
+          e.stopImmediatePropagation();
+        },
+        { capture: true }
+      );
+    </script>
+
+    <!-- Video pop up -->
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoSection = document.getElementById("video-section");
+        const videoContainer = document.querySelector(".video-container");
+        const video = document.querySelector("video");
+        let isPlaying = false;
+
+        function checkScroll() {
+          const rect = videoSection.getBoundingClientRect();
+          const isInView =
+            rect.top <= window.innerHeight * 0.9 &&
+            rect.bottom >= window.innerHeight * 0.1;
+
+          if (isInView && !isPlaying) {
+            videoContainer.classList.add("video-active");
+            video.play().catch((e) => {
+              console.log("Autoplay prevented:", e);
+              video.controls = true;
+            });
+            isPlaying = true;
+          } else if (!isInView && isPlaying) {
+            videoContainer.classList.remove("video-active");
+            video.pause();
+            video.currentTime = 0;
+            isPlaying = false;
+          }
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        window.addEventListener("resize", checkScroll);
+        checkScroll();
+      });
+    </script> -->
+
+    <!-- adinaJS here -->
+    <!-- <script src="js/adinajs/vendor/jquery.js"></script> -->
+    <!-- <script src="js/adinajs/vendor/waypoints.js"></script> -->
+    <!-- <script src="js/adinajs/bootstrap-bundle.js"></script> -->
+    <!-- <script src="js/adinajs/swiper-bundle.js"></script> -->
+    <!-- <script src="js/adinajs/slick.js"></script> -->
+    <!-- <script src="js/adinajs/imagesloaded-pkgd.js"></script> -->
+
+    <script src="js/adinajs/magnific-popup.js"></script>
+
+    <!-- <script src="js/adinajs/nice-select.js"></script> -->
+    <!-- <script src="js/adinajs/purecounter.js"></script> -->
+    <!-- <script src="js/adinajs/wow.js"></script> -->
+    <!-- <script src="js/adinajs/parallax-scroll.js"></script> -->
+    <!-- <script src="js/adinajs/parallax.js"></script> -->
+    <!-- <script src="js/adinajs/onpage-menu.js"></script> -->
+    <!-- <script src="js/adinajs/jquery-knob.js"></script> -->
+    <!-- <script src="js/adinajs/jquery-appear.js"></script> -->
+    <!-- <script src="js/adinajs/ajax-form.js"></script> -->
+    <script src="js/adinajs/slider-init.js"></script>
+    <script src="js/adinajs/main.js"></script>
+
+    <script defer src="js/invenajs/plugins/"></script>
+    <script defer src="js/invenajs/plugins/odometer.js"></script>
+    <script defer src="js/invenajs/plugins/jquery-appear.js"></script>
+    <script defer src="js/invenajs/plugins/gsap.js"></script>
+    <script defer src="js/invenajs/plugins/split-text.js"></script>
+    <script defer src="js/invenajs/plugins/scroll-trigger.js"></script>
+    <script defer src="js/invenajs/plugins/smooth-scroll.js"></script>
+    <script defer src="js/invenajs/plugins/metismenu.js"></script>
+    <script defer src="js/invenajs/plugins/popup.js"></script>
+
+    <script defer src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="js/invenajs/plugins/swiper.js"></script>
+    <script defer src="js/invenajs/main.js"></script>
+
+    <!-- Start Footer Section -->
+    <footer style="background-color: #000; color: #fff; padding: 40px 20px">
+      <div
+        style="
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 20px;
+        "
+      >
+        <!-- About Section -->
+        <div style="flex: 1 1 250px">
+          <h3 style="margin-bottom: 15px; color: white">About SKYBRIDGE</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: white">
+            We are committed to delivering the best services with integrity and
+            excellence. Connect with us to enhance your business reach.
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div style="flex: 1 1 150px">
+          <h3 style="margin-bottom: 15px; color: white">Follow Us</h3>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Instagram -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: 13px;
+          opacity: 0.8;
+        "
+      >
+        © 2025 SKYBRIDGE. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- End Footer Section -->
+  </body>
+</html>
