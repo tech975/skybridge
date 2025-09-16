@@ -69,24 +69,6 @@
         margin: 10px 0;
       }
 
-      footer {
-        width: 100%;
-        background-color: #000;
-        color: #fff;
-        padding: 40px 20px;
-      }
-
-      .footer-container {
-        max-width: 2200px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
       .about-section,
       .social-section {
         flex: 1 1 250px;
@@ -159,13 +141,17 @@
         </div>
         <nav class="primary-nav">
           <ul class="primary-nav-list nav">
-            <li class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent">
+            <li
+              class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent"
+            >
               <a href="index.html">HOME</a>
             </li>
             <li class="menu-item"><a href="#about">ABOUT</a></li>
             <li class="menu-item"><a href="#service">OUR EXPERTISE</a></li>
             <li class="menu-item"><a href="blog.html">BLOG</a></li>
-            <li class="menu-item"><a href="pressRelease.html">PRESS RELEASE</a></li>
+            <li class="menu-item">
+              <a href="pressRelease.html">PRESS RELEASE</a>
+            </li>
             <li class="menu-item"><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
@@ -178,10 +164,17 @@
           <article>
             <img src="asset/images/banner/20.webp" alt="Feature Blog Image" />
             <div>
-              <p style="font-size: 14px; color: #666">Jan 05, 2025 &nbsp;&nbsp; 2 min read</p>
-              <h2 style="font-size: 24px">Discover unparalleled expertise in market</h2>
+              <p style="font-size: 14px; color: #666">
+                Jan 05, 2025 &nbsp;&nbsp; 2 min read
+              </p>
+              <h2 style="font-size: 24px">
+                Discover unparalleled expertise in market
+              </h2>
               <p style="font-size: 16px; color: #444">
-                Discover Unparalleled Expertise in the Real Estate Market, Providing In-Depth Knowledge, Strategic Insights, and Tailored Solutions to Help You Navigate Every Step of Your Property Journey with Confidence.
+                Discover Unparalleled Expertise in the Real Estate Market,
+                Providing In-Depth Knowledge, Strategic Insights, and Tailored
+                Solutions to Help You Navigate Every Step of Your Property
+                Journey with Confidence.
               </p>
             </div>
           </article>
@@ -191,50 +184,140 @@
           <article>
             <img src="asset/images/banner/20.webp" alt="Blog 1 Image" />
             <div>
-              <p style="font-size: 12px; color: #666">Jan 02, 2025 &nbsp;&nbsp; 2 min read</p>
-              <h3 style="font-size: 18px">Tips for Choosing House Paint Colors to Look Elegant and Comfortable</h3>
+              <p style="font-size: 12px; color: #666">
+                Jan 02, 2025 &nbsp;&nbsp; 2 min read
+              </p>
+              <h3 style="font-size: 18px">
+                Tips for Choosing House Paint Colors to Look Elegant and
+                Comfortable
+              </h3>
             </div>
           </article>
 
           <article>
             <img src="asset/images/banner/20.webp" alt="Blog 2 Image" />
             <div>
-              <p style="font-size: 12px; color: #666">Feb 15, 2025 &nbsp;&nbsp; 3 min read</p>
-              <h3 style="font-size: 18px">Modern and Functional Minimalist Home Design Inspirations</h3>
+              <p style="font-size: 12px; color: #666">
+                Feb 15, 2025 &nbsp;&nbsp; 3 min read
+              </p>
+              <h3 style="font-size: 18px">
+                Modern and Functional Minimalist Home Design Inspirations
+              </h3>
             </div>
           </article>
 
           <article>
             <img src="asset/images/banner/20.webp" alt="Blog 3 Image" />
             <div>
-              <p style="font-size: 12px; color: #666">Mar 27, 2025 &nbsp;&nbsp; 4 min read</p>
-              <h3 style="font-size: 18px">Common Home Design Mistakes to Avoid for a More Functional Living Space</h3>
+              <p style="font-size: 12px; color: #666">
+                Mar 27, 2025 &nbsp;&nbsp; 4 min read
+              </p>
+              <h3 style="font-size: 18px">
+                Common Home Design Mistakes to Avoid for a More Functional
+                Living Space
+              </h3>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-container">
-        <div class="about-section">
+    <footer
+      style="
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+      "
+    >
+      <div
+        style="
+          max-width: 2200px;
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 20px;
+        "
+      >
+        <!-- About Section -->
+        <div
+          style="
+            flex: 1 1 250px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+          "
+        >
           <h3 style="margin-bottom: 15px; color: white">About SKYBRIDGE</h3>
           <p style="font-size: 14px; line-height: 1.6; color: white">
-            We are committed to delivering the best services with integrity and excellence. Connect with us to enhance your business reach.
+            We are committed to delivering the best services with integrity and
+            excellence. Connect with us to enhance your business reach.
           </p>
         </div>
 
-        <div class="social-section">
+        <!-- Social Media -->
+        <div
+          style="
+            flex: 1 1 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
           <h3 style="margin-bottom: 15px; color: white">Follow Us</h3>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              style="
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+              "
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: 13px;
+          opacity: 0.8;
+        "
+      >
         © 2025 SKYBRIDGE. All rights reserved.
       </div>
     </footer>
