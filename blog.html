@@ -242,93 +242,326 @@
     </section>
 
     <footer
-      style="
-        width: 100%;
-        background-color: #000;
-        color: #fff;
-        padding: 40px 20px;
-      "
+      class="footer-area bg-black pt-100 pb-70"
+      style="padding-top: 100px; padding-bottom: 70px"
     >
-      <div
-        style="
-          max-width: 2200px;
-          width: 100%;
-          margin: auto;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 20px;
-        "
-      >
-        <div
-          style="
-            flex: 1 1 250px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: start;
-          "
-        >
-          <h3 style="margin-bottom: 15px; color: white">About SKYBRIDGE</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: white">
-            We are committed to delivering the best services with integrity and
-            excellence. Connect with us to enhance your business reach.
-          </p>
-        </div>
+      <div class="container">
+        <div class="row">
+          <!-- About Column -->
+          <div
+            class="col-lg-4 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <img
+                  src="asset/images/logo/skybridge_logo.png"
+                  alt="Skybridge Logo"
+                  style="max-width: 150px; height: auto"
+                />
+              </div>
+              <p style="color: #aaa; margin-bottom: 20px; line-height: 1.8">
+                Empowering businesses through innovative investment solutions
+                and strategic growth opportunities.
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
 
-        <div
-          style="
-            flex: 1 1 150px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <h3 style="margin-bottom: 15px; color: white">Follow Us</h3>
-          <div style="display: flex; gap: 10px">
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
+          <!-- Quick Links -->
+          <div
+            class="col-lg-2 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Expertise</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pressRelease.html">Press Release</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div
+            class="col-lg-3 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Contact Us</h3>
+              <ul class="footer-contact">
+                <li>
+                  <!-- <i class="fas fa-map-marker-alt"></i> -->
+                  <span
+                    >123 Business Avenue, Financial District,<br />New York, NY
+                    10001, USA</span
+                  >
+                </li>
+                <li>
+                  <!-- <i class="fas fa-phone"></i> -->
+                  <span>+1 (555) 123-4567</span>
+                </li>
+                <li>
+                  <!-- <i class="fas fa-envelope"></i> -->
+                  <span>info@skybridgegroup.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div
+            class="col-lg-3 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.8s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Newsletter</h3>
+              <p style="color: #aaa; margin-bottom: 15px">
+                Subscribe to our newsletter for the latest updates.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your Email" required />
+                <a href="contact.html">
+                  <button type="submit">Contact Us</button>
+                </a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="footer-bottom">© 2025 SKYBRIDGE. All rights reserved.</div>
+      <!-- Copyright -->
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright-text text-center">
+                <p
+                  style="
+                    color: #777;
+                    margin: 0;
+                    padding: 20px 0;
+                    border-top: 1px solid #333;
+                  "
+                >
+                  &copy; <span id="current-year">2025</span> SkyBridge Group.
+                  All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <style>
+      /* Footer Styles */
+      .footer-area {
+        position: relative;
+        overflow: hidden;
+        background: #000 !important;
+        color: #fff;
+      }
+
+      .footer-widget {
+        margin-bottom: 30px;
+      }
+
+      .footer-title {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: #fff; /* Changed from #011f3d to white */
+      }
+
+      .footer-links li,
+      .footer-contact li {
+        margin-bottom: 12px;
+        list-style: none;
+        position: relative;
+        padding-left: 30px;
+      }
+
+      .footer-links a,
+      .footer-contact a {
+        color: #aaa;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 2px;
+      }
+
+      .footer-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        transition: width 0.3s ease;
+      }
+
+      .footer-links a:hover::after {
+        width: 100%;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+        padding-left: 0;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+
+      .social-icon:hover {
+        background: transparent;
+        transform: translateY(-3px);
+        border-color: #fff; /* Added white border on hover */
+      }
+
+      .newsletter-form {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        padding: 0 20px;
+        color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .newsletter-form input::placeholder {
+        color: #aaa;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+        height: 50px;
+        background: white;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-form button:hover {
+        background: white;
+      }
+
+      .contact-btn:hover {
+        background: #00e5e9 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(46, 252, 255, 0.3);
+      }
+
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .wow {
+        visibility: hidden;
+      }
+
+      .wow.fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        visibility: visible;
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .footer-widget {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+
+    <style>
+      /* Add this style for the logo container */
+      .footer-logo {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .footer-logo img {
+        max-width: 150px;
+        height: auto;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-logo img:hover {
+        opacity: 1;
+      }
+    </style>
+
+    <script>
+      // Update current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Initialize WOW.js for animations
+      document.addEventListener("DOMContentLoaded", function () {
+        new WOW().init();
+      });
+    </script>
 
     <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
     <script src="lanserjs/plugins.js"></script>

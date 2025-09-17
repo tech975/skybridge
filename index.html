@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SkyBridge Group</title>
+    <link rel="stylesheet" href="css/adinacss/bootstrap.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="css/lansercss/plugins.css" />
-
     <link rel="stylesheet" href="css/lansercss/style.css" />
-
     <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
     <!-- AdinaCss files -->
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/adinacss/bootstrap.css" />
     <link rel="stylesheet" href="css/adinacss/animate.css" />
     <link rel="stylesheet" href="css/adinacss/swiper-bundle.css" />
     <link rel="stylesheet" href="css/adinacss/slick.css" />
@@ -56,18 +54,6 @@
       href="css/invenacss/plugins/odometer.css"
       as="style"
     />
-
-    <!-- Don't uncomment this -->
-    <!-- <link
-      rel="stylesheet preload"
-      href="css/invenacss/vendor/bootstrap.min.css"
-      as="style"
-    /> -->
-
-    <!-- <link rel="stylesheet preload" href="invenaStyleCss/style.css" as="style" /> -->
-
-    <!-- Lanser JS -->
-    <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
       .black-strip {
@@ -193,8 +179,9 @@
 
       #slides img {
         min-width: 100%;
-        height: 500px;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain; /* Changed from 'cover' to 'contain' */
+        background-color: #000; /* optional: fill space with background */
       }
 
       button {
@@ -215,6 +202,17 @@
 
       #next {
         right: 10px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        #image-slider {
+          height: 300px;
+        }
+
+        #slides img {
+          height: 300px;
+        }
       }
     </style>
 
@@ -370,6 +368,7 @@
         }
       }
     </style>
+
   </head>
   <body>
     <header class="site-header">
@@ -526,10 +525,12 @@
                             >Capital Markets & Fundraising.</a
                           >
                         </h4>
-                        <p class="mb-160">
-                          IPOs, private placements, rights-issues, debt
-                          instruments—raising the right capital, at optimal
-                          terms.
+                        <p class="mb-100">
+                          We deliver independent, strategic advice across equity
+                          and debt markets. From IPOs, private placements, and
+                          rights issues to buybacks and fundraising, our
+                          expertise ensures smooth execution and optimal
+                          outcomes.
                         </p>
                         <div class="td-panel-btn">
                           <a class="td-btn td-left-right" href="about.html"
@@ -561,12 +562,7 @@
                   <div class="td-panel-item">
                     <div class="td-panel-content">
                       <span>03.</span>
-                      <h4
-                        class="td-panel-title child-three"
-                        style="white-space: nowrap !important"
-                      >
-                        Strategic Corporate Advisory
-                      </h4>
+                      <h4 class="td-panel-title child-three">Private Equity</h4>
                     </div>
                   </div>
 
@@ -582,12 +578,13 @@
                       <div class="td-panel-content-inner fix p-relative">
                         <span class="td-panel-shape">03</span>
                         <h4 class="td-panel-title-2 mb-10">
-                          <a href="about.html">Strategic Corporate Advisory.</a>
+                          <a href="about.html">Private Equity.</a>
                         </h4>
-                        <p class="mb-160">
-                          Restructuring, strategy roadmap, market entry, exit
-                          plans—aligning leadership vision with operational
-                          execution.
+                        <p class="mb-120">
+                          We back high-potential businesses with growth capital,
+                          buyouts, and strategic joint ventures — driving
+                          expansion, innovation, and long-term value for
+                          investors and stakeholders.
                         </p>
                         <div class="td-panel-btn">
                           <a class="td-btn td-left-right" href="about.html"
@@ -629,10 +626,13 @@
                 alt="a"
               />
               <span class="td-section-title-pre mb-10">Our Expertise</span>
-              <h2 class="td-section-title td-about-right-space">
+              <h2
+                class="td-section-title td-about-right-space"
+                style="padding-bottom: 120px"
+              >
                 Fueling ideas that shape futures.
               </h2>
-              <p class="td-about-para pr-10">
+              <p class="td-about-para pr-10" style="font-size: 20px">
                 We aim to inspire creative solutions, bold entrepreneurs and
                 unconventional strategies to redefine what’s possible in the
                 ever-evolving universe of interactive entertainment.
@@ -656,11 +656,13 @@
             <small>Steve Jobs.</small>
           </blockquote>
           <blockquote>
-            "Think big, start small, but move fast, opportunities don’t wait. The courage to dream and the will to act are what create empires."
+            "Think big, start small, but move fast, opportunities don’t wait.
+            The courage to dream and the will to act are what create empires."
             <small>Dhirubhai Ambani.</small>
           </blockquote>
           <blockquote>
-            “Someone’s sitting in the shade today because someone planted a tree a long time ago.”
+            “Someone’s sitting in the shade today because someone planted a tree
+            a long time ago.”
             <small>Warren Buffett.</small>
           </blockquote>
         </div>
@@ -672,11 +674,20 @@
     <!-- mannual bannner -->
     <div id="image-slider">
       <div id="slides">
-        <img src="asset/images/banner/banner1.jpeg" alt="Slide 1" />
-        <img src="asset/images/banner/banner2.jpeg" alt="Slide 2" />
-        <img src="asset/images/banner/banner3.jpeg" alt="Slide 3" />
-        <img src="asset/images/banner/banner4.jpeg" alt="Slide 4" />
-        <img src="asset/images/banner/banner5.jpeg" alt="Slide 5" />
+        <img
+          src="asset/images/gallary/capital-market-solutions.jpg"
+          alt="Slide 1"
+        />
+        <img
+          src="asset/images/gallary/investment-bankilng-solution-banner-size.jpg"
+          alt="Slide 2"
+        />
+        <img
+          src="asset/images/gallary/private-equity-and-growth-size.jpg"
+          alt="Slide 3"
+        />
+        <img src="asset/images/gallary/transforming-future.jpg" alt="Slide 4" />
+        <img src="asset/images/gallary/venture-capital.jpg" alt="Slide 5" />
       </div>
 
       <button id="prev">&#10094;</button>
@@ -1095,107 +1106,323 @@
     <script defer src="js/invenajs/main.js"></script>
 
     <!-- Start Footer Section -->
-    <footer
-      style="
-        width: 100%;
-        background-color: #000;
-        color: #fff;
-        padding: 40px 20px;
-      "
-    >
-      <div
-        style="
-          max-width: 2200px;
-          width: 100%;
-          margin: auto;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 20px;
-        "
-      >
-        <!-- Social Media -->
-        <div
-          style="
-            flex: 1 1 150px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <h3 style="margin-bottom: 15px; color: white">Follow Us</h3>
-          <div style="display: flex; gap: 10px">
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="#"
-              style="
-                color: #fff;
-                font-size: 20px;
-                text-decoration: none;
-                transition: color 0.3s;
-              "
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
+    <footer class="footer-area bg-black pt-100 pb-70">
+      <div class="container">
+        <div class="row">
+          <!-- About Column -->
+          <div
+            class="col-lg-4 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <img
+                  src="asset/images/logo/skybridge_logo.png"
+                  alt="Skybridge Logo"
+                  style="max-width: 150px; height: auto"
+                />
+              </div>
+              <p style="color: #aaa; margin-bottom: 20px; line-height: 1.8">
+                Empowering businesses through innovative investment solutions
+                and strategic growth opportunities.
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-icon" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- About Section -->
-        <div
-          style="
-            flex: 1 1 250px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <!-- <h3 style="margin-bottom: 15px; color: white">About SKYBRIDGE</h3> -->
-          <div class="hero-btn-wrap text-center">
-            <p style="font-size: 14px; line-height: 1.6; color: white">
-              Have Questions? Reach Out to Our Team Today!
-            </p>
-            <a href="contact.html" class="hero-btn">Contact US</a>
+          <!-- Quick Links -->
+          <div
+            class="col-lg-2 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Expertise</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pressRelease.html">Press Release</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div
+            class="col-lg-3 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Contact Us</h3>
+              <ul class="footer-contact">
+                <li>
+                  <!-- <i class="fas fa-map-marker-alt"></i> -->
+                  <span
+                    >123 Business Avenue, Financial District,<br />New York, NY
+                    10001, USA</span
+                  >
+                </li>
+                <li>
+                  <!-- <i class="fas fa-phone"></i> -->
+                  <span>+1 (555) 123-4567</span>
+                </li>
+                <li>
+                  <!-- <i class="fas fa-envelope"></i> -->
+                  <span>info@skybridgegroup.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div
+            class="col-lg-3 col-md-6 mb-30 wow fadeInUp"
+            data-wow-delay="0.8s"
+          >
+            <div class="footer-widget">
+              <h3 class="footer-title">Newsletter</h3>
+              <p style="color: #aaa; margin-bottom: 15px">
+                Subscribe to our newsletter for the latest updates.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your Email" required />
+                <button type="submit"><a href="contact.html">Contact Us</a></button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <div
-        style="
-          text-align: center;
-          margin-top: 30px;
-          font-size: 13px;
-          opacity: 0.8;
-        "
-      >
-        © 2025 SKYBRIDGE. All rights reserved.
+      <!-- Copyright -->
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright-text text-center">
+                <p
+                  style="
+                    color: #777;
+                    margin: 0;
+                    padding: 20px 0;
+                    border-top: 1px solid #333;
+                  "
+                >
+                  &copy; <span id="current-year">2025</span> SkyBridge Group.
+                  All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <style>
+      /* Footer Styles */
+      .footer-area {
+        position: relative;
+        overflow: hidden;
+        background: #000 !important;
+        color: #fff;
+      }
+
+      .footer-widget {
+        margin-bottom: 30px;
+      }
+
+      .footer-title {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: #fff; /* Changed from #011f3d to white */
+      }
+
+      .footer-links li,
+      .footer-contact li {
+        margin-bottom: 12px;
+        list-style: none;
+        position: relative;
+        padding-left: 30px;
+      }
+
+      .footer-links a,
+      .footer-contact a {
+        color: #aaa;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 2px;
+      }
+
+      .footer-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        transition: width 0.3s ease;
+      }
+
+      .footer-links a:hover::after {
+        width: 100%;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+        padding-left: 0;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+
+      .social-icon:hover {
+        background: transparent;
+        transform: translateY(-3px);
+        border-color: #fff; /* Added white border on hover */
+      }
+
+      .newsletter-form {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        padding: 0 20px;
+        color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .newsletter-form input::placeholder {
+        color: #aaa;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+        height: 50px;
+        background: white;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-form button:hover {
+        background: white;
+      }
+
+      .contact-btn:hover {
+        background: #00e5e9 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(46, 252, 255, 0.3);
+      }
+
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .wow {
+        visibility: hidden;
+      }
+
+      .wow.fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        visibility: visible;
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .footer-widget {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+
+    <style>
+      /* Add this style for the logo container */
+      .footer-logo {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .footer-logo img {
+        max-width: 150px;
+        height: auto;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-logo img:hover {
+        opacity: 1;
+      }
+    </style>
+
+    <script>
+      // Update current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Initialize WOW.js for animations
+      document.addEventListener("DOMContentLoaded", function () {
+        new WOW().init();
+      });
+    </script>
+    <!-- End Footer Section -->
 
     <!-- End Footer Section -->
   </body>
