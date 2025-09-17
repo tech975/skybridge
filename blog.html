@@ -15,7 +15,6 @@
     <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-      /* Base Styles */
       body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -113,8 +112,22 @@
           margin: 40px auto;
           padding: 20px 10px;
         }
+        .blog-container {
+          flex-direction: column;
+        }
+        .main-blog,
+        .side-blogs {
+          max-width: 100%;
+          width: 100%;
+        }
+        .side-blogs {
+          flex-direction: column;
+        }
         .side-blogs article {
           flex: 1 1 100%;
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
         }
         .footer-container {
           flex-direction: column;
@@ -136,7 +149,13 @@
       <div class="container header-wrap">
         <div class="site-branding">
           <span class="site-title">
-            <a href="index.html">SKYBRIDGE</a>
+            <a href="index.html">
+              <img
+                src="asset/images/logo/skybridge_logo.png"
+                alt="skybridge"
+                style="width: 100px; height: 50px"
+              />
+            </a>
           </span>
         </div>
         <nav class="primary-nav">
@@ -152,7 +171,7 @@
             <li class="menu-item">
               <a href="pressRelease.html">PRESS RELEASE</a>
             </li>
-            <li class="menu-item"><a href="#contact">CONTACT</a></li>
+            <li class="menu-item"><a href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -242,7 +261,6 @@
           gap: 20px;
         "
       >
-        <!-- About Section -->
         <div
           style="
             flex: 1 1 250px;
@@ -260,7 +278,6 @@
           </p>
         </div>
 
-        <!-- Social Media -->
         <div
           style="
             flex: 1 1 150px;
@@ -310,16 +327,7 @@
         </div>
       </div>
 
-      <div
-        style="
-          text-align: center;
-          margin-top: 30px;
-          font-size: 13px;
-          opacity: 0.8;
-        "
-      >
-        © 2025 SKYBRIDGE. All rights reserved.
-      </div>
+      <div class="footer-bottom">© 2025 SKYBRIDGE. All rights reserved.</div>
     </footer>
 
     <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
