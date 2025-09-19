@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Press Release</title>
+    <title>Details Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1300px;
+        margin: auto;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+    </style>
 
     <link
       rel="stylesheet"
@@ -13,343 +23,45 @@
     <link rel="stylesheet" href="css/lansercss/style.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
-
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-
-      body {
-        background-color: #f7f7f7;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .press-container {
-        width: 100%;
-        max-width: 1000px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .press-sidebar {
-        width: 300px;
-      }
-
-      .press-sidebar h3 {
-        margin-bottom: 15px;
-        font-size: 1.2em;
-        color: #333;
-      }
-
-      .press-card {
-        background-color: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 15px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-      }
-
-      .press-card:hover {
-        transform: scale(1.02);
-      }
-
-      .press-card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-      }
-
-      .press-card-content {
-        padding: 10px;
-      }
-
-      .press-card-content h4 {
-        margin-bottom: 8px;
-        font-size: 1em;
-        color: #007bff;
-      }
-
-      .press-card-content p {
-        font-size: 0.8em;
-        color: #777;
-      }
-
-      .press-content-area {
-        flex-grow: 1;
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .press-header img {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 20px;
-      }
-
-      .press-header h1 {
-        font-size: 2em;
-        margin-bottom: 10px;
-      }
-
-      .press-date {
-        color: #777;
-        font-size: 0.9em;
-        margin-bottom: 20px;
-      }
-
-      .press-subtitle {
-        font-weight: normal;
-        color: #555;
-        margin-bottom: 30px;
-      }
-
-      .press-content p {
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-
-      .press-footer {
-        border-top: 1px solid #ddd;
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .press-footer p {
-        font-size: 0.9em;
-        color: #555;
-        margin: 0;
-      }
-
-      .press-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .press-actions button {
-        background-color: #007bff;
-        border: none;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 0.9em;
-        transition: background-color 0.3s ease;
-      }
-
-      .press-actions button:hover {
-        background-color: #0056b3;
-      }
-
-      footer {
-        width: 100%;
-        background-color: #000;
-        color: #fff;
-        padding: 40px 20px;
-      }
-
-      footer .footer-container {
-        max-width: 2200px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      footer .about-section,
-      footer .social-section {
-        flex: 1 1 250px;
-        width: 100%;
-      }
-
-      footer h3 {
-        margin-bottom: 15px;
-        color: white;
-      }
-
-      footer p {
-        font-size: 14px;
-        line-height: 1.6;
-        color: white;
-      }
-
-      footer .social-icons {
-        display: flex;
-        gap: 10px;
-      }
-
-      footer .social-icons a {
-        color: #fff;
-        font-size: 20px;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-
-      footer .footer-bottom {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 13px;
-        opacity: 0.8;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 800px) {
-        .press-container {
-          flex-direction: column;
-          align-items: center;
-        }
-        .press-sidebar {
-          width: 100%;
-        }
-        .press-content-area {
-          width: 100%;
-          margin-top: 20px;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .press-footer {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .press-actions {
-          justify-content: flex-start;
-        }
-      }
-    </style>
   </head>
   <body>
     <header
       class="site-header"
-      style="
-        width: 100%;
-        margin-bottom: 50px;
-        background-color: black !important;
-      "
+      style="margin-bottom: 50px; background-color: black !important"
     >
       <div class="container header-wrap">
         <div class="site-branding">
           <span class="site-title">
-            <a href="index.html">SKYBRIDGE</a>
+            <a href="index.html">
+              <img
+                src="asset/images/logo/skybridge_logo.png"
+                alt="skybridge"
+                style="width: 100px; height: 50px"
+              />
+            </a>
           </span>
         </div>
         <nav class="primary-nav">
           <ul class="primary-nav-list nav">
             <li
-              class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent active"
+              class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent"
             >
               <a href="index.html">HOME</a>
             </li>
-            <li class="menu-item"><a href="#about">ABOUT</a></li>
-            <li class="menu-item"><a href="expertise.html">OUR EXPERTISE</a></li>
+            <li class="menu-item"><a href="about.html">ABOUT</a></li>
+            <li class="menu-item">
+              <a href="expertise.html">OUR EXPERTISE</a>
+            </li>
             <li class="menu-item"><a href="blog.html">BLOG</a></li>
             <li class="menu-item">
               <a href="pressRelease.html">PRESS RELEASE</a>
             </li>
-            <li class="menu-item"><a href="#contact">CONTACT</a></li>
+            <li class="menu-item"><a href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <div class="press-container" style="margin: 50px 0">
-      <aside class="press-sidebar">
-        <h3>Recent Press Releases</h3>
-        <div class="press-card">
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60"
-            alt="Release 1"
-          />
-          <div class="press-card-content">
-            <h4>Product Launch</h4>
-            <p>Sep 10, 2025</p>
-          </div>
-        </div>
-        <div class="press-card">
-          <img
-            src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?w=500&auto=format&fit=crop&q=60"
-            alt="Release 2"
-          />
-          <div class="press-card-content">
-            <h4>Annual Report</h4>
-            <p>Aug 15, 2025</p>
-          </div>
-        </div>
-        <div class="press-card">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1673480195253-dc2229c109ef?w=500&auto=format&fit=crop&q=60"
-            alt="Release 3"
-          />
-          <div class="press-card-content">
-            <h4>Partnership</h4>
-            <p>Jul 05, 2025</p>
-          </div>
-        </div>
-      </aside>
-
-      <main class="press-content-area">
-        <header class="press-header">
-          <img
-            src="https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=500&auto=format&fit=crop&q=60"
-            alt="Main Release"
-          />
-          <h1>Company Announces Groundbreaking Product Launch</h1>
-          <p class="press-date">September 16, 2025</p>
-          <h2 class="press-subtitle">
-            Revolutionizing the industry with innovative solutions
-          </h2>
-        </header>
-
-        <section class="press-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non
-            erat sit amet sapien tincidunt lacinia. Nullam vel ipsum nec leo
-            ullamcorper facilisis. Curabitur id arcu sit amet risus egestas
-            convallis non ut erat.
-          </p>
-          <p>
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Sed vulputate, nunc eget sollicitudin
-            viverra, arcu odio gravida nibh, id fermentum dolor sapien a sapien.
-          </p>
-          <p>
-            The new product offers a seamless experience with cutting-edge
-            technology to enhance user satisfaction and productivity. It marks a
-            significant milestone for the company’s future growth and market
-            presence.
-          </p>
-        </section>
-
-        <footer class="press-footer">
-          <p><strong>Author:</strong> Jane Doe, PR Manager</p>
-          <div class="press-actions">
-            <button onclick="window.print()">Print</button>
-            <button onclick="downloadPDF()">Download PDF</button>
-          </div>
-        </footer>
-      </main>
-    </div>
+    <div id="content"></div>
 
     <footer
       class="footer-area bg-black pt-100 pb-70"
@@ -674,10 +386,40 @@
     </script>
 
     <script>
-      function downloadPDF() {
-        alert("This feature can be implemented using a library like jsPDF.");
+      const data = {
+        "investment-banking": {
+          title: "Investment Banking",
+          img: "asset/images/gallary/businesswomen-shaking-hands-after-reaching-an-agre-2025-06-10-10-45-29-utc (1).jpg",
+          desc: "M&A advisory, due diligence, valuations, buy-/sell-side transactions that unlock value.",
+        },
+        "capital-markets": {
+          title: "Capital Markets & Fundraising",
+          img: "asset/images/gallary/colleagues-meeting-discuss-business-project-planni-2025-01-10-05-51-05-utc.jpg",
+          desc: "IPOs, private placements, rights-issues, debt instruments—raising the right capital, at optimal terms.",
+        },
+        "corporate-advisory": {
+          title: "Strategic Corporate Advisory",
+          img: "asset/images/gallary/diverse-business-people-having-a-meeting-2025-02-03-09-54-47-utc.JPG",
+          desc: "Restructuring, strategy roadmap, market entry, exit plans—aligning leadership vision with operational execution.",
+        },
+      };
+
+      // Get query param
+      const params = new URLSearchParams(window.location.search);
+      const slide = params.get("slide");
+
+      if (data[slide]) {
+        document.getElementById("content").innerHTML = `
+        <h1>${data[slide].title}</h1>
+        <img src="${data[slide].img}" alt="${data[slide].title}">
+        <p>${data[slide].desc}</p>
+      `;
+      } else {
+        document.getElementById("content").innerHTML =
+          "<h1>Slide not found</h1>";
       }
     </script>
+
     <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
     <script src="lanserjs/plugins.js"></script>
     <script src="js/lanserjs/main.js"></script>
