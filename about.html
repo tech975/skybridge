@@ -46,7 +46,7 @@
       as="style"
     />
     <link rel="stylesheet" href="css/lansercss/plugins.css" />
-    <!-- <link rel="stylesheet" href="css/lansercss/style.css" /> -->
+    <link rel="stylesheet" href="css/lansercss/style.css" />
 
     <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
@@ -61,14 +61,43 @@
 
       @media (max-width: 575px) {
         .service-details-left-area {
-          padding-top: 180px !important;
+          padding-top: 250px !important;
         }
         .service-details-left-area img {
-          width: 95% !important;
+          padding-top: 20px !important;
+          width: 100% !important;
           max-width: 100% !important;
         }
       }
     </style>
+
+    <!-- for scroller -->
+    <style>
+      html,
+      body {
+        overflow-x: hidden !important; /* block horizontal scroll */
+        overflow-y: auto !important; /* always allow vertical scroll */
+        height: auto !important;
+        overscroll-behavior: contain; /* fixes mobile wheel/touch issues */
+        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+      }
+    </style>
+
+    <!-- script for scroller -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Force scrolling if plugin tries to block it
+        document.body.style.overflowY = "auto";
+        document.documentElement.style.overflowY = "auto";
+      });
+
+      // Also reset on window resize (handles mobile/desktop switch)
+      window.addEventListener("resize", function () {
+        document.body.style.overflowY = "auto";
+        document.documentElement.style.overflowY = "auto";
+      });
+    </script>
+    
   </head>
   <body>
     <header
@@ -275,12 +304,12 @@
     <div class="rts-service-details-area-main-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-xl-8">
+          <div class="col-xl-8" style="width: max-content !important">
             <div
               class="service-details-left-area"
-              style="position: relative; z-index: 1; padding-top: 550px"
+              style="position: relative; z-index: 1; padding-top: 480px"
             >
-              <div class="thumbnail">
+              <div class="">
                 <img
                   src="asset/about/11.webp"
                   alt=""
@@ -780,7 +809,7 @@
     <script defer src="js/invenajs/plugins/gsap.js"></script>
     <script defer src="js/invenajs/plugins/split-text.js"></script>
     <script defer src="js/invenajs/plugins/scroll-trigger.js"></script>
-    <script defer src="js/invenajs/plugins/smooth-scroll.js"></script>
+    <!-- <script defer src="js/invenajs/plugins/smooth-scroll.js"></script> -->
     <script defer src="js/invenajs/plugins/metismenu.js"></script>
     <script defer src="js/invenajs/plugins/popup.js"></script>
 
