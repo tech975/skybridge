@@ -140,6 +140,87 @@
         }
       }
     </style>
+
+    <style>
+      /* Blog Card Styles - Add to your CSS file */
+      .blog-container-blog {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 16px;
+      }
+      .blog-grid-blog {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .blog-card-blog {
+        background: #fff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s;
+      }
+      .blog-card-blog:hover {
+        transform: translateY(-6px);
+      }
+      .blog-card-blog img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+      }
+      .blog-card-content-blog {
+        padding: 18px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card-date-blog {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #df8d7b;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .blog-card-title-blog {
+        font-size: 18px;
+        font-weight: 600;
+        color: #494949;
+        margin: 8px 0;
+      }
+      .blog-card-text-blog {
+        font-size: 13px;
+        color: #737373;
+        margin-bottom: 18px;
+      }
+      .blog-read-more-blog {
+        color: #df8d7b;
+        font-size: 13px;
+        text-decoration: none;
+        margin-top: auto;
+        transition: color 0.2s;
+        align-self: flex-start;
+      }
+      .blog-read-more-blog:hover {
+        color: #bc6c58;
+      }
+      @media (max-width: 990px) {
+        .blog-grid-blog {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 650px) {
+        .blog-grid-blog {
+          grid-template-columns: 1fr;
+        }
+        .blog-card-blog img {
+          height: 200px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header
@@ -177,7 +258,7 @@
       </div>
     </header>
 
-    <section>
+    <!-- <section>
       <div class="blog-container">
         <div class="main-blog">
           <article>
@@ -239,7 +320,110 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <!-- Blog Section -->
+    <div class="blog-container-blog" style="margin-top: 100px !important;">
+      <div class="blog-grid-blog">
+        <!-- Blog Card 1 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+        <!-- Repeat for other cards (change image if needed!) -->
+        <!-- Blog Card 2 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+        <!-- Blog Card 4 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+        <!-- Blog Card 5 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1449247613801-ab564514eb9e"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+        <!-- Blog Card 6 -->
+        <div class="blog-card-blog">
+          <img
+            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+            alt="Furniture"
+          />
+          <div class="blog-card-content-blog">
+            <div class="blog-card-date-blog">30 <span>June, 2021</span></div>
+            <div class="blog-card-title-blog">FURNITURE DRAWING 2021</div>
+            <div class="blog-card-text-blog">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </div>
+            <a class="blog-read-more-blog" href="#">Read more...</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer
       class="footer-area bg-black pt-100 pb-70"
