@@ -1,29 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Details Page</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 1300px;
-        margin: auto;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        margin: 20px 0;
-      }
-    </style>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/lansercss/plugins.css" />
-    <link rel="stylesheet" href="css/lansercss/style.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyBridge</title>
+    <link rel="stylesheet" href="styles-expertise.css" />
   </head>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/lansercss/plugins.css" />
+  <link rel="stylesheet" href="css/lansercss/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f3f3f3;
+    }
+
+    /* Container */
+    .container-expertise {
+      max-width: 1100px;
+      background: #fff;
+      margin: 30px auto;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.07);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Header Flex Layout */
+    .header-expertise {
+      display: flex;
+      align-items: center;
+      background: #fafafa;
+      padding: 18px 0;
+      border-bottom: 1px solid #ececec;
+    }
+
+    /* Date Box */
+    .date-box-expertise {
+      flex: 0 0 120px;
+      min-width: 90px;
+      background: #ede7df;
+      border-radius: 8px;
+      margin-left: 14px;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .date-day-expertise {
+      color: #a74d36;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .date-month-expertise {
+      color: #a74d36;
+      font-size: 1em;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    /* Header Image: Stretches to Full Width Between Sidebars */
+    .header-image-expertise {
+      flex: 1 1 auto;
+      margin: 0 18px;
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .header-image-expertise img {
+      width: 100%;
+      height: 102px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Info Sidebar */
+    .header-info-expertise {
+      flex: 0 0 130px;
+      min-width: 120px;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: #454545;
+      font-size: 1em;
+    }
+    .author-expertise {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .likes-expertise,
+    .comments-expertise,
+    .share-expertise {
+      color: #898888;
+      margin-bottom: 2px;
+    }
+    .share-expertise {
+      font-weight: bold;
+    }
+
+    /* Content Section */
+    .content-expertise {
+      padding: 26px 22px;
+    }
+
+    .title-expertise {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin: 0 0 17px 0;
+      color: #3a3733;
+    }
+
+    .text-expertise {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.7;
+      margin: 10px 0;
+    }
+
+    /* Footer Section */
+    .footer-expertise {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #ececec;
+      background: #f8f8f8;
+      padding: 14px 22px;
+    }
+
+    .share-expertise {
+      font-size: 0.95em;
+      font-weight: 700;
+      color: #4e4e4e;
+    }
+    .social-icons-expertise i {
+      margin: 0 3px;
+      font-size: 1.2em;
+      color: #a74d36;
+    }
+
+    /* Use Font Awesome if needed for social icons */
+
+    .tags-expertise {
+      font-size: 0.95em;
+      font-weight: 700;
+      color: #4e4e4e;
+    }
+    .tags-expertise span {
+      display: inline-block;
+      background: #ede6df;
+      color: #a74d36;
+      font-size: 0.95em;
+      border-radius: 4px;
+      padding: 2px 12px;
+      margin-left: 7px;
+    }
+
+    /* Comments */
+    .comment-expertise {
+      background: #f6f5f3;
+      display: flex;
+      align-items: flex-start;
+      padding: 18px 22px;
+      border-top: 1px solid #ececec;
+    }
+
+    .comment-user-expertise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .comment-user-img-expertise {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #ccc;
+      margin-bottom: 7px;
+    }
+
+    .comment-user-name-expertise {
+      font-size: 1em;
+      color: #a74d36;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .comment-text-expertise {
+      color: #666;
+      font-size: 1em;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 700px) {
+      .container-expertise {
+        max-width: 99%;
+        margin: 10px;
+      }
+      .header-expertise {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 0;
+      }
+      .date-box-expertise,
+      .header-info-expertise {
+        margin: 0 auto 9px auto;
+        width: 80%;
+        min-width: 0;
+      }
+      .header-image-expertise {
+        margin: 0 0 9px 0;
+      }
+      .header-image-expertise img {
+        height: 90px;
+      }
+      .content-expertise,
+      .footer-expertise,
+      .comment-expertise {
+        padding: 9px 6px;
+        font-size: 0.97em;
+      }
+      .title-expertise {
+        font-size: 1.2em;
+      }
+      .comment-user-expertise {
+        margin-right: 8px;
+      }
+      .comment-user-img-expertise {
+        width: 38px;
+        height: 38px;
+      }
+      .tags-expertise span {
+        padding: 2px 7px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .header-image-expertise img {
+        height: 55px;
+      }
+      .content-expertise,
+      .footer-expertise,
+      .comment-expertise {
+        padding: 5px 3px;
+        font-size: 0.97em;
+      }
+    }
+  </style>
+
   <body>
     <header
       class="site-header"
@@ -61,7 +309,70 @@
         </nav>
       </div>
     </header>
-    <div id="content"></div>
+
+    <div class="container-expertise" style="margin-top: 100px !important;">
+      <!-- Header Section -->
+      <div class="header-expertise">
+        <div class="header-image-expertise" style="height: 45vh !important">
+          <!-- Replace with your image path -->
+          <img
+            src="asset/images/gallary/diverse-business-people-having-a-meeting-2025-02-03-09-54-47-utc.JPG"
+            alt="Strategic Corporate Advisory"
+            style="height: 100% !important"
+          />
+        </div>
+      </div>
+      <!-- Content Section -->
+      <div class="content-expertise">
+        <h2 class="title-expertise">Strategic Corporate Advisory</h2>
+        <p class="text-expertise">
+          On the other hand, we denounce with righteous indignation and dislike
+          men who are so beguiled and demoralized by the charms of pleasure of
+          the moment, so blinded by desire, that they cannot foresee the pain
+          and trouble that are bound to ensue; and equal blame belongs to those
+          who fail in their duty through weakness of will, which is the same as
+          saying through shrinking from toil and pain. These cases are perfectly
+          simple and easy to distinguish. In a free hour.&nbsp;On the other
+          hand, we denounce with righteous indignation and dislike men who are
+          so beguiled and demoralized by the charms of pleasure of the moment,
+          so blinded by desire, that they cannot foresee the pain and trouble
+          that are bound to ensue; and equal blame belongs to those who fail in
+          their duty through weakness of will
+        </p>
+        <p class="text-expertise">
+          which is the same as saying through shrinking from toil and pain.
+          These cases are perfectly simple and easy to distinguish. In a free
+          hour.On the other hand, we denounce with righteous indignation and
+          dislike men who are so beguiled and demoralized by the charms of
+          pleasure of the moment, so blinded by desire, that they cannot foresee
+          the pain and trouble that are bound to ensue; and equal blame belongs
+          to those who fail in their duty through weakness of will, which is the
+          same as saying through shrinking from toil and pain. These cases are
+          perfectly simple and easy to distinguish. In a free hour.
+        </p>
+      </div>
+      <!-- Footer Section -->
+      <div class="footer-expertise"></div>
+      <!-- Comment Section -->
+      <div class="comment-expertise">
+        <div class="comment-user-expertise">
+          <img
+            class="comment-user-img-expertise"
+            src="user-image.jpg"
+            alt="Salim Rana"
+          />
+          <span class="comment-user-name-expertise">Salim Rana</span>
+        </div>
+        <div class="comment-text-expertise">
+          No one rejects, dislikes, or avoids pleasure itself, because it is
+          pleasure, but because those who do not know how to pursue pleasure
+          rationally encounter consequences that are extremely painful. Nor
+          again is there anyone who loves or pursues or desires to obtain pain
+          of itself, because it is pain, but because occasionally circumstances
+          occur in which toil and pain can procure him some great pleasure.
+        </div>
+      </div>
+    </div>
 
     <footer
       class="footer-area bg-black pt-100 pb-70"
@@ -383,41 +694,6 @@
       document.addEventListener("DOMContentLoaded", function () {
         new WOW().init();
       });
-    </script>
-
-    <script>
-      const data = {
-        "investment-banking": {
-          title: "Investment Banking",
-          img: "asset/images/gallary/businesswomen-shaking-hands-after-reaching-an-agre-2025-06-10-10-45-29-utc (1).jpg",
-          desc: "M&A advisory, due diligence, valuations, buy-/sell-side transactions that unlock value.",
-        },
-        "capital-markets": {
-          title: "Capital Markets & Fundraising",
-          img: "asset/images/gallary/colleagues-meeting-discuss-business-project-planni-2025-01-10-05-51-05-utc.jpg",
-          desc: "IPOs, private placements, rights-issues, debt instruments—raising the right capital, at optimal terms.",
-        },
-        "corporate-advisory": {
-          title: "Strategic Corporate Advisory",
-          img: "asset/images/gallary/diverse-business-people-having-a-meeting-2025-02-03-09-54-47-utc.JPG",
-          desc: "Restructuring, strategy roadmap, market entry, exit plans—aligning leadership vision with operational execution.",
-        },
-      };
-
-      // Get query param
-      const params = new URLSearchParams(window.location.search);
-      const slide = params.get("slide");
-
-      if (data[slide]) {
-        document.getElementById("content").innerHTML = `
-        <h1>${data[slide].title}</h1>
-        <img src="${data[slide].img}" alt="${data[slide].title}">
-        <p>${data[slide].desc}</p>
-      `;
-      } else {
-        document.getElementById("content").innerHTML =
-          "<h1>Slide not found</h1>";
-      }
     </script>
 
     <script src="js/lanserjs/vendor/jquery-3.2.0.min.js"></script>
