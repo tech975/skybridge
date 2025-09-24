@@ -1,0 +1,211 @@
+/* Mobile Responsive Fixes */
+
+/* Ensure proper box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Base font size for better mobile scaling */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for absolutely positioned elements on mobile */
+@media screen and (max-width: 767px) {
+    /* Reset any problematic absolute positioning */
+    .absolute-element {
+        position: relative !important;
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Improve touch targets */
+    a, button, .btn, [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    /* Fix for fixed headers */
+    .site-header {
+        position: relative;
+        width: 100%;
+    }
+    
+    /* Adjust padding and margins for mobile */
+    .container, .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Make sure content doesn't overflow */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+    .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4,
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9,
+    .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 991.98px) {
+    /* Add any tablet-specific fixes here */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Add specific styles for small devices */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Add specific styles for extra small devices */
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    
+    /* Ensure buttons are touch-friendly */
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Mobile Responsive Fixes - Consolidated and !important rules */
+    @media screen and (max-width: 767px) {
+
+      .service-slider-mobile .service-bg {
+        height: 400px !important;
+        width: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        position: relative !important;
+      }
+
+      .service-slider-mobile .td-service-wrap {
+          background-color: rgba(0, 0, 0, 0.7) !important;
+          padding: 20px !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          min-height: 80px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+          align-items: flex-start !important;
+          opacity: 0 !important; /* Hidden by default */
+          transition: opacity 0.3s ease-in-out !important;
+          pointer-events: none !important;
+      }
+
+      .service-slider-mobile .swiper-slide-active .td-service-wrap {
+          opacity: 1 !important; /* Visible on active slide */
+          pointer-events: auto !important;
+      }
+
+      .service-slider-mobile .td-service-number {
+        color: #fff !important;
+        z-index: 10 !important;
+        position: relative !important;
+        margin-bottom: 5px !important;
+      }
+
+      .service-slider-mobile .td-service-title a {
+        color: #ff9800 !important;
+        z-index: 10 !important;
+        position: relative !important;
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .service-slider-mobile .td-service-content-para {
+        color: #aaa !important;
+        z-index: 10 !important;
+        position: relative !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+      }
+
+      /* Swiper Navigation Arrows */
+      .service-slider-mobile .swiper-button-next,
+      .service-slider-mobile .swiper-button-prev {
+        color: #fff !important;
+        background-color: rgba(0, 0, 0, 0.7) !important; /* Darker background for more contrast */
+        padding: 10px !important;
+        border-radius: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-top: -20px !important;
+        z-index: 101 !important; /* Even higher z-index than pagination */
+      }
+
+      .service-slider-mobile .swiper-button-next::after,
+      .service-slider-mobile .swiper-button-prev::after {
+        font-size: 18px !important; /* Ensure the default Swiper arrow icons are visible */
+      }
+
+      /* Swiper Pagination Dots */
+      .service-slider-mobile .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+          position: absolute !important;
+          bottom: -35px !important; /* Adjusted position to be clearly below the slider */
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          width: auto !important;
+          height: 10px !important; /* Smaller explicit height for pagination container */
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          text-align: center !important;
+          z-index: 100 !important;
+          padding: 0 !important;
+          pointer-events: auto !important;
+      }
+
+      .service-slider-mobile .swiper-pagination-bullet {
+        width: 4px !important; /* Very small dots */
+        height: 4px !important;
+        background-color: rgba(255, 255, 255, 0.7) !important;
+        opacity: 1 !important;
+        margin: 0 2px !important; /* Adjusted spacing between dots */
+        cursor: pointer !important;
+        border-radius: 50% !important;
+        line-height: 0 !important; /* Ensure no extra line height affects size */
+      }
+
+      .service-slider-mobile .swiper-pagination-bullet-active {
+        background-color: #ff9800 !important;
+      }
+    }
+}
