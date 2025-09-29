@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/lansercss/plugins.css" />
   <link rel="stylesheet" href="css/lansercss/style.css" />
   <link rel="stylesheet" href="css/custom.css" />
+  <link rel="icon" href="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Sky_Bridge_cc_White.jpg?v=1759143052" type="image/x-icon">
   <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
 
   <!-- AdinaCss files -->
@@ -33,6 +34,237 @@
   <link rel="stylesheet preload" href="css/invenacss/plugins/magnifying-popup.css" as="style" />
   <link rel="stylesheet preload" href="css/invenacss/plugins/odometer.css" as="style" />
 
+  <style>
+    /* Hide right-side content on mobile */
+@media (max-width: 991px) {
+    .td-about-content-wrap.ml-45.wow.fadeInRight,
+    .td-about-content-wrap.ml-45 {
+        display: none;
+    }
+    
+    /* Adjust the left column to take full width on mobile */
+    .td-about-area .col-xl-6.col-lg-7.col-md-12 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    /* Center align the content on mobile */
+    .td-panel-content {
+        text-align: center;
+    }
+    
+    /* Adjust the panel items for better mobile display */
+    .td-panel-item {
+        padding: 0 15px;
+    }
+}
+  </style>
+  <style>
+    /* Center the expertise section heading */
+.td-portfolio-title-wrap {
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+/* Add space between heading and cards */
+.td-about-area {
+    padding-top: 40px;
+}
+
+/* Ensure proper spacing for the expertise title */
+.td-section-title {
+    font-size: 46px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Add a decorative line under the title */
+.td-section-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff9800;
+}
+
+/* Adjust the card container */
+.td-about-area .container {
+    padding-top: 20px;
+}
+
+/* Add spacing between cards */
+.td-panel-item {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect to cards */
+.td-panel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .td-portfolio-title-wrap {
+        padding: 0 20px !important;
+    }
+    
+    .td-section-title {
+        font-size: 38px;
+    }
+    
+    .td-about-area {
+        padding-top: 20px;
+    }
+}
+  </style>
+<style>
+  /* Mobile Slider Styles */
+.service-slider-mobile .swiper-slide {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Image container */
+.service-slider-mobile .service-bg {
+    position: relative;
+    height: 60vh;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Overlay for image */
+.service-slider-mobile .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Overlay content */
+.service-slider-mobile .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    overflow-y: auto;
+    padding: 30px 25px;
+}
+
+/* Number styling */
+.service-slider-mobile .td-service-number {
+   
+    top: 25px;
+    left: 25px;
+    font-size: 70px;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 3;
+    margin: -20px;
+    line-height: 1;
+    font-weight: 800;
+    pointer-events: none;
+    top: 25px;
+    left: 25px;
+}
+
+/* Title styling */
+.service-slider-mobile .td-service-title {
+  margin: 0 0 20px 0; 
+    position: relative;
+    z-index: 2;
+
+}
+
+.service-slider-mobile .td-service-title a {
+    color: #fff !important;
+    font-size: 24px !important;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+   
+}
+
+/* Description text */
+.service-slider-mobile .td-service-content-para {
+  color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 16px !important;
+    line-height: 1.8;
+    margin: 0 0 15px 0; 
+    padding-top: 10px; 
+    position: relative;
+
+}
+
+.service-slider-mobile .td-service-content-para:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+ 
+
+/* Navigation arrows */
+.service-slider-mobile .swiper-button-next,
+.service-slider-mobile .swiper-button-prev {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    display: none;
+}
+
+.service-slider-mobile .swiper-button-next:after,
+.service-slider-mobile .swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Pagination dots */
+.service-slider-mobile .swiper-pagination {
+    bottom: 10px !important;
+}
+
+.service-slider-mobile .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px !important;
+}
+
+.service-slider-mobile .swiper-pagination-bullet-active {
+    background: #ff9800;
+    opacity: 1;
+    transform: scale(1.2);
+}
+</style>
   <style>
     .black-strip {
       background-color: #000;
@@ -310,6 +542,7 @@
       color: #000;
       /* default color */
       transition: color 0.3s ease;
+      line-height: 20px;
     }
 
     .blog-link:hover {
@@ -397,7 +630,7 @@
           </li>
           <li class="menu-item"><a href="about.html">ABOUT</a></li>
           <li class="menu-item"><a href="expertise.html">OUR EXPERTISE</a></li>
-          <li class="menu-item"><a href="blog.html">BLOG</a></li>
+         
 
         </ul>
       </nav>
@@ -423,20 +656,16 @@
     <!-- .single-slider -->
   </section>
 
-  <div class="td-portfolio-title-wrap wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" style="
-        visibility: visible;
-        animation-duration: 1s;
-        animation-delay: 0.3s;
-        animation-name: fadeInUp;
-        padding: 0 60px !important;
-        margin-top: 50px !important;
-      ">
-    <!-- <span class="td-section-title-pre mb-10">Case Studies</span> -->
+  <!-- Removed the 'Our Expertise' title section after the banner as requested -->
+  <!--
+  <div class="td-portfolio-title-wrap wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" 
+     style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp; margin: 50px 0 20px !important;">
     <h5 class="td-section-title">Our Expertise</h5>
-  </div>
+</div>
+  -->
 
   <!-- td-about-area-start -->
-  <div class="td-about-area fix pt-145 pb-120">
+  <div class="td-about-area fix " style="margin-top: 0px !important; padding-top: 0px !important;">
     <div class="container">
       <div class="row">
         <div class="col-xl-6 col-lg-7 col-md-12 mb-30">
@@ -573,7 +802,7 @@
             data-wow-duration="1s">
             <img class="td-about-text-big d-none d-xl-block" src="assets/img/about/a.png" alt="a" />
             <span class="td-section-title-pre mb-10">Our Expertise</span>
-            <h2 class="td-section-title td-about-right-space" style="padding-bottom: 100px !important;">
+            <h2 class="td-section-title td-about-right-space" style="padding-bottom: 80px !important;">
               Fueling ideas that shape futures.
             </h2>
             <div>
@@ -646,7 +875,7 @@
         animation-duration: 1s;
         animation-delay: 0.3s;
         animation-name: fadeInUp;
-        padding: 0 60px !important;
+        padding: 0 40px !important;
         margin-top: 50px !important;
       ">
     <!-- <span class="td-section-title-pre mb-10">Case Studies</span>----------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -892,12 +1121,12 @@
         <div class="swiper-container service-slider-mobile">
           <div class="swiper-wrapper" >
             <div class="swiper-slide">
-              <div class="service-bg service-img-1" style="border-radius: 10px; background-size:cover; background-repeat: no-repeat; " data-background="asset/images/gallary/capital-markets-mobile.jpg">
+              <div class="service-bg service-img-1" style="border-radius: 10px; background-size:cover; background-repeat: no-repeat; background-color: #333;" data-background="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Excellence_in_Execution.png?v=1759133957">
                 <div class="td-service-wrap p-relative">
                   <h2 class="td-service-number" style="font-weight: bolder !important; -webkit-text-stroke-color: rgba(249, 246, 246, 1.1); ">01</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="service-details.html">Excellence in Execution</a>
+                      <a href="#">Excellence in Execution</a>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -911,12 +1140,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="service-bg service-img-2"style="border-radius: 10px; background-size: cover; background-repeat: no-repeat;" data-background="asset/images/banner/investment-banking-mobile.jpg"> 
+              <div class="service-bg service-img-2"style="border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-color: #333;" data-background="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Trust_Integrity.png?v=1759133956"> 
                 <div class="td-service-wrap p-relative">
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">02</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="service-details.html">Trust & Integrity</a>
+                      <a href="#">Trust & Integrity</a>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -930,12 +1159,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="service-bg service-img-3" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat;" data-background="asset/images/banner/M&A-advisory-mobile.jpg">
+              <div class="service-bg service-img-3" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-color: #333;" data-background="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Growth_Value_Creation.png?v=1759133956">
                 <div class="td-service-wrap p-relative">
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">03</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="service-details.html">Growth & Value Creation</a>
+                      <a href="#">Growth & Value Creation</a>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -949,12 +1178,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="service-bg service-img-4" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat;" data-background="asset/images/banner/market-expansion-mobile.jpg">
+              <div class="service-bg service-img-4" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-color: #333;" data-background="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Screenshot_2025-09-29_134928.png?v=1759133983">
                 <div class="td-service-wrap p-relative">
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">04</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="service-details.html">Collaborative Partnerships</a>
+                      <a href="#">Collaborative Partnerships</a>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -968,12 +1197,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="service-bg service-img-5" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat;" data-background="asset/images/banner/strategic-partership-mobile.JPG">
+              <div class="service-bg service-img-5" style="border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-color: #333;" data-background="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Innovation_with_Responsibility.png?v=1759133956">
                 <div class="td-service-wrap p-relative">
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">05</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="service-details.html">Innovation with Responsibility</a>
+                      <a href="#">Innovation with Responsibility</a>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -998,76 +1227,6 @@
   </div>
   <!-- td-service-area-end -->
 
-  <!-- Blog Section -->
-  <div class="td-portfolio-title-wrap wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" style="
-        visibility: visible;
-        animation-duration: 1s;
-        animation-delay: 0.3s;
-        animation-name: fadeInUp;
-        padding: 0 60px !important;
-      ">
-    <!-- <span class="td-section-title-pre mb-10">Case Studies</span> -->
-    <h2 class="td-section-title">Our Blogs</h2>
-  </div>
-  <section class="blog-section" style="margin-bottom: 50px; margin-top: -1px">
-    <div class="blog-container">
-      <!-- Main Feature Blog -->
-      <div class="main-blog">
-        <article class="blog-card">
-          <img src="asset/images/banner/20.webp" srcset="
-                images/feature-mobile.jpg    600w,
-                asset/images/banner/20.webp 1200w
-              " sizes="(max-width: 768px) 100vw, 65vw" alt="Feature Blog Image" />
-          <div class="blog-content">
-            <p class="date">Jan 05, 2025 &nbsp;&nbsp; 2 min read</p>
-            <h2>Discover unparalleled expertise in market</h2>
-            <p>
-              <a href="blog.html" class="blog-link">
-                Discover Unparalleled Expertise in the Real Estate Market,
-                Providing In-Depth Knowledge, Strategic Insights, and Tailored
-                Solutions to Help You Navigate Every Step of Your Property
-                Journey with Confidence.
-              </a>
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Side Blogs -->
-      <div class="side-blogs">
-        <article class="blog-card">
-          <img src="asset/images/banner/20.webp" srcset="
-                asset/images/banner/20.webp  600w,
-                asset/images/banner/20.webp 1200w
-              " sizes="(max-width: 768px) 100vw, 33vw" alt="Blog 2 Image" />
-          <div class="blog-content">
-            <p class="date">Feb 15, 2025 &nbsp;&nbsp; 3 min read</p>
-            <h3>
-              <a href="blog.html" class="blog-link">
-                Modern and Functional Minimalist Home Design Inspirations
-              </a>
-            </h3>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <img src="asset/images/banner/20.webp" srcset="
-                asset/images/banner/20.webp  600w,
-                asset/images/banner/20.webp 1200w
-              " sizes="(max-width: 768px) 100vw, 33vw" alt="Blog 3 Image" />
-          <div class="blog-content">
-            <p class="date">Mar 27, 2025 &nbsp;&nbsp; 4 min read</p>
-            <h3>
-              <a href="blog.html" class="blog-link">
-                Common Home Design Mistakes to Avoid for a More Functional
-                Living Space
-              </a>
-            </h3>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- td-about-area-end -->
   <!-- <script src="index.js"></script> -->
@@ -1162,7 +1321,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="expertise.html">Our Expertise</a></li>
-              <li><a href="blog.html">Blog</a></li>
+           
 
             </ul>
           </div>
@@ -1423,39 +1582,138 @@
     }
   </style>
 
-  <script>
-    // Update current year
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
+  <style>
+    .scrolled-navbar {
+      background-color: rgba(0, 0, 0, 0.4) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(15px) !important;
+    }
+  </style>
 
-    // Initialize WOW.js for animations
-    document.addEventListener("DOMContentLoaded", function () {
-      new WOW().init();
-    });
-
-    // Initialize Swiper for mobile view
-    document.addEventListener("DOMContentLoaded", function () {
-      const swiper = new Swiper(".service-slider-mobile", {
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize Swiper
+    const swiper = new Swiper(".service-slider-mobile", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        lazy: true, // Enable lazy loading
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+            el: ".swiper-pagination",
+            clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-      });
-
-      // Apply background images for mobile slider after Swiper initializes
-      $(".service-slider-mobile .service-bg").each(function () {
-        $(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
-      });
     });
-  </script>
+
+    // Function to apply background images
+    function applyBackgroundImages() {
+      $(".service-slider-mobile .service-bg").each(function () {
+          const $this = $(this);
+          const imageUrl = $this.attr("data-background");
+
+          // Check if image is already loaded or being loaded
+          if ($this.data('image-loaded') || !imageUrl) {
+              return; // Skip if already loaded or no image URL
+          }
+
+          // Create a new Image object to preload the image
+          const img = new Image();
+          img.src = imageUrl;
+
+          img.onload = function() {
+              // Once the image is loaded, apply it as background
+              $this.css("background-image", "url(" + imageUrl + ")");
+              $this.data('image-loaded', true); // Mark as loaded
+          };
+          img.onerror = function() {
+              console.error("Failed to load image:", imageUrl);
+              $this.data('image-loaded', false); // Mark as failed
+          };
+      });
+    }
+
+    // Apply background images initially
+    applyBackgroundImages();
+
+    // Apply background images whenever the slide changes
+    swiper.on('slideChangeTransitionEnd', function () {
+      applyBackgroundImages();
+    });
+
+    // Add click effect to slides
+    document.querySelectorAll('.service-slider-mobile .swiper-slide').forEach(slide => {
+        // Create overlay for image
+        const overlay = document.createElement('div');
+        overlay.className = 'image-overlay';
+        
+        // Add content container
+        const content = document.createElement('div');
+        content.className = 'overlay-content';
+        
+        // Clone the existing content
+        const existingContent = slide.querySelector('.td-service-wrap').cloneNode(true);
+        content.appendChild(existingContent);
+        
+        // Add overlay and content to the image container
+        const imageContainer = slide.querySelector('.service-bg');
+        if (imageContainer) {
+            imageContainer.prepend(overlay);
+            imageContainer.prepend(content);
+        }
+
+        // Toggle overlay on slide click
+        slide.addEventListener('click', function(e) {
+            // Don't toggle if clicking on navigation or pagination
+            if (e.target.closest('.swiper-button-next') || 
+                e.target.closest('.swiper-button-prev') || 
+                e.target.closest('.swiper-pagination')) {
+                return;
+            }
+            
+            // Toggle active class on the slide
+            const isActive = slide.classList.toggle('active');
+            
+            // Show/hide the overlay and content
+            if (isActive) {
+                overlay.style.opacity = '1';
+                content.style.opacity = '1';
+            } else {
+                overlay.style.opacity = '0';
+                content.style.opacity = '0';
+            }
+        });
+    });
+});
+ </script>
   <!-- End Footer Section -->
 </body>
 
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.site-header');
+    const banner = document.getElementById('home'); // Assuming your banner section has id="home"
+
+    function handleScroll() {
+      if (banner) {
+        const bannerBottom = banner.getBoundingClientRect().bottom;
+        if (window.scrollY > bannerBottom) {
+          header.classList.add('scrolled-navbar');
+        } else {
+          header.classList.remove('scrolled-navbar');
+        }
+      } else if (window.scrollY > 0) {
+        // Fallback if banner element is not found, apply after any scroll
+        header.classList.add('scrolled-navbar');
+      } else {
+        header.classList.remove('scrolled-navbar');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check in case the page is loaded scrolled
+  });
+</script>
