@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="css/lansercss/plugins.css" />
   <link rel="stylesheet" href="css/lansercss/style.css" />
   <link rel="stylesheet" href="css/custom.css" />
-  <link rel="icon" href="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Sky_Bridge_cc_White.jpg?v=1759143052" type="image/x-icon">
   <script src="js/lanserjs/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="icon" href="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Sky_Bridge_cc_White.jpg?v=1759143052" type="image/x-icon">
 
   <!-- AdinaCss files -->
   <!-- CSS here -->
@@ -179,10 +179,10 @@
    
     top: 25px;
     left: 25px;
-    font-size: 70px;
+   
     color: rgba(255, 255, 255, 0.2);
     z-index: 3;
-    margin: 37px;
+    margin: -20px;
     line-height: 1;
     font-weight: 800;
     pointer-events: none;
@@ -192,7 +192,7 @@
 
 /* Title styling */
 .service-slider-mobile .td-service-title {
-  margin: 0 0 20px 0; 
+  /* margin: 0 0 20px 0;  */
     position: relative;
     z-index: 2;
 
@@ -212,7 +212,7 @@
   color: rgba(255, 255, 255, 0.95) !important;
     font-size: 16px !important;
     line-height: 1.8;
-    margin: 0 0 15px 0; 
+  
     padding-top: 10px; 
     position: relative;
 
@@ -630,8 +630,7 @@
           </li>
           <li class="menu-item"><a href="about.html">ABOUT</a></li>
           <li class="menu-item"><a href="expertise.html">OUR EXPERTISE</a></li>
-         
-
+        
         </ul>
       </nav>
     </div>
@@ -656,13 +655,10 @@
     <!-- .single-slider -->
   </section>
 
-  <!-- Removed the 'Our Expertise' title section after the banner as requested -->
-  <!--
-  <div class="td-portfolio-title-wrap wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" 
+  <!-- <div class="td-portfolio-title-wrap wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" 
      style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp; margin: 50px 0 20px !important;">
     <h5 class="td-section-title">Our Expertise</h5>
-</div>
-  -->
+</div> -->
 
   <!-- td-about-area-start -->
   <div class="td-about-area fix " style="margin-top: 0px !important; padding-top: 0px !important;">
@@ -1126,7 +1122,7 @@
                   <h2 class="td-service-number" style="font-weight: bolder !important; -webkit-text-stroke-color: rgba(249, 246, 246, 1.1); ">01</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="#">Excellence in Execution</a>
+                      <span>Excellence in Execution</span> 
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -1145,7 +1141,7 @@
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">02</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="#">Trust & Integrity</a>
+                      <span>Trust & Integrity</span>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -1164,7 +1160,7 @@
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">03</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="#">Growth & Value Creation</a>
+                      <span>Growth & Value Creation</span> 
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -1183,7 +1179,7 @@
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">04</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="#">Collaborative Partnerships</a>
+                      <span>Collaborative Partnerships</span> 
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -1202,7 +1198,7 @@
                   <h2 class="td-service-number" style="-webkit-text-stroke-color: rgba(249, 246, 246, 1.1);">05</h2>
                   <div class="td-service-content">
                     <h4 class="td-service-title">
-                      <a href="#">Innovation with Responsibility</a>
+                      <span>Innovation with Responsibility</span>
                     </h4>
                     <div class="td-service-content-inner">
                       <p class="td-service-content-para mb-45">
@@ -1227,6 +1223,7 @@
   </div>
   <!-- td-service-area-end -->
 
+ 
 
   <!-- td-about-area-end -->
   <!-- <script src="index.js"></script> -->
@@ -1321,7 +1318,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="expertise.html">Our Expertise</a></li>
-           
+             
 
             </ul>
           </div>
@@ -1689,10 +1686,8 @@
 });
  </script>
   <!-- End Footer Section -->
-</body>
 
-</html>
-<script>
+  <script>
   document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.site-header');
     const banner = document.getElementById('home'); // Assuming your banner section has id="home"
@@ -1717,3 +1712,6 @@
     handleScroll(); // Initial check in case the page is loaded scrolled
   });
 </script>
+</body>
+
+</html>
