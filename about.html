@@ -72,32 +72,14 @@
       }
     </style>
 
-    <!-- for scroller -->
+    <!-- Mobile scroll fix -->
     <style>
-      html,
-      body {
-        overflow-x: hidden !important; /* block horizontal scroll */
-        overflow-y: auto !important; /* always allow vertical scroll */
-        height: auto !important;
-        overscroll-behavior: contain; /* fixes mobile wheel/touch issues */
-        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+      @media (max-width: 767px) {
+        body {
+          overflow: auto !important;
+        }
       }
     </style>
-
-    <!-- script for scroller -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Force scrolling if plugin tries to block it
-        document.body.style.overflowY = "auto";
-        document.documentElement.style.overflowY = "auto";
-      });
-
-      // Also reset on window resize (handles mobile/desktop switch)
-      window.addEventListener("resize", function () {
-        document.body.style.overflowY = "auto";
-        document.documentElement.style.overflowY = "auto";
-      });
-    </script>
   </head>
   <body>
     <header
@@ -109,7 +91,7 @@
           <span class="site-title">
             <a href="index.html">
               <img
-                src="asset/images/logo/skybridge_logo.png"
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/skybridge_logo.png?v=1772689184"
                 alt="skybridge"
                 style="width: 100px; height: 50px"
               />
@@ -164,7 +146,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="large-image-bottm-breadcrumb">
-              <img src="asset/images/Updatedimg/Where Capital Meet Capital.jpg" style="width: 900px;" alt="about" />
+              <img src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/WHERE_CAPITAL_MEET_CAPITAL.jpg?v=1772691362" style="width: 900px;" alt="about" />
             </div>
           </div>
         </div>
@@ -259,7 +241,7 @@
               data-delay="0.2"
               data-duration="1.2"
             >
-              <img src="asset/images/Updatedimg/How we work.jpg" alt="working-process" />
+              <img src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/How_we_work.jpg?v=1772689429" alt="working-process" />
             </div>
           </div>
         </div>
@@ -304,14 +286,14 @@
     <div class="rts-service-details-area-main-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-xl-8" style="width: max-content !important">
+          <div class="col-xl-8">
             <div
               class="service-details-left-area"
-              style="position: relative; z-index: 1; padding-top: 720px"
+              style="position: relative; z-index: 1; padding-top: 50px"
             >
               <div class="">
                 <img
-                  src="asset/images/Updatedimg/How We Do.jpeg"
+                  src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/HOW_WE_DO_2.jpg?v=1772691753"
                   alt=""
                   style="
                     position: absolute;
@@ -484,7 +466,7 @@
             <div class="footer-widget">
               <div class="footer-logo">
                 <img
-                  src="asset/images/logo/skybridge_logo.png"
+                  src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/skybridge_logo.png?v=1772689184"
                   alt="Skybridge Logo"
                   style="max-width: 150px; height: auto"
                 />
@@ -502,8 +484,6 @@
                   class="fab fa-linkedin-in"></i></a>
               <a href="https://www.instagram.com/colab_platforms/" class="social-icon" target="_blank"><i
                   class="fab fa-instagram"></i></a>
-              <!-- <a href="https://www.instagram.com/colab_platforms/" class="social-icon" target="_blank"><i
-                  class="fa-brands fa-x-twitter"></i></a> -->
 
             </div>
             </div>
@@ -521,8 +501,6 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#">Our Expertise</a></li>
                
-                <!-- <li><a href="pressRelease.html">Press Release</a></li> -->
-                <!-- <li><a href="contact.html">Contact</a></li> -->
               </ul>
             </div>
           </div>
@@ -536,41 +514,19 @@
               <h3 class="footer-title">Contact Us</h3>
               <ul class="footer-contact">
                 <li>
-                  <!-- <i class="fas fa-map-marker-alt"></i> -->
                   <span   
                     >30, Fl. 2 , Nawab Bldg, D.N Rd Hutatma Chowk Fort, Mumbai G.P.O., Mumbai, Mumbai, Maharashtra, India, 400001</span
                   >
                 </li>
                 <li>
-                  <!-- <i class="fas fa-phone"></i> -->
                   <span>+91 91366 41303</span>
                 </li>
                 <li>
-                  <!-- <i class="fas fa-envelope"></i> -->
                   <span>Partnership@skybridgegroup.in</span>
                 </li>
               </ul>
             </div>
           </div>
-
-          <!-- Newsletter -->
-          <!-- <div
-            class="col-lg-3 col-md-6 mb-30 wow fadeInUp"
-            data-wow-delay="0.8s"
-          >
-            <div class="footer-widget">
-              <h3 class="footer-title">Newsletter</h3>
-              <p style="color: #aaa; margin-bottom: 15px">
-                Subscribe to our newsletter for the latest updates.
-              </p>
-              <form class="newsletter-form">
-                <input type="email" placeholder="Your Email" required />
-                <a href="contact.html">
-                  <button type="submit">Contact Us</button>
-                </a>
-              </form>
-            </div>
-          </div> -->
         </div>
       </div>
 
@@ -607,8 +563,19 @@
         color: #fff;
       }
 
+      .footer-area .col-lg-4,
+      .footer-area .col-lg-2,
+      .footer-area .col-lg-3 {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
       .footer-widget {
         margin-bottom: 30px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
       }
 
       .footer-title {
@@ -617,6 +584,8 @@
         margin-bottom: 25px;
         position: relative;
         padding-bottom: 10px;
+        display: block !important;
+        visibility: visible !important;
       }
 
       .footer-title:after {
@@ -626,7 +595,13 @@
         bottom: 0;
         width: 50px;
         height: 2px;
-        background: #fff; /* Changed from #011f3d to white */
+        background: #fff;
+      }
+
+      .footer-links,
+      .footer-contact {
+        display: block !important;
+        visibility: visible !important;
       }
 
       .footer-links li,
@@ -637,7 +612,8 @@
         padding-left: 30px;
         font-size: 15px;
         color: #aaa;
-        
+        display: block !important;
+        visibility: visible !important;
       }
 
       .footer-links a,
@@ -688,7 +664,30 @@
       .social-icon:hover {
         background: transparent;
         transform: translateY(-3px);
-        border-color: #fff; /* Added white border on hover */
+        border-color: #fff;
+      }
+
+      .footer-logo {
+        text-align: center;
+        margin-top: 20px;
+        display: block !important;
+        visibility: visible !important;
+      }
+
+      .footer-logo img {
+        max-width: 150px;
+        height: auto;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-logo img:hover {
+        opacity: 1;
+      }
+
+      .footer-social {
+        display: flex !important;
+        visibility: visible !important;
       }
 
       .newsletter-form {
@@ -746,13 +745,13 @@
       }
 
       .wow {
-        visibility: hidden;
+        visibility: visible;
       }
 
       .wow.fadeInUp {
         animation-name: fadeInUp;
         animation-duration: 1s;
-        visibility: visible;
+        animation-fill-mode: both;
       }
 
       /* Responsive */
